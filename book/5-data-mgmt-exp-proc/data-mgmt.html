@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>3. Collaborative Development Platforms &#8212; AI Practitioner Handbook</title>
+    <title>What Kinds of Data Management Solutions Are There, And Which One is Suitable for My Project? &#8212; AI Practitioner Handbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="What are some considerations in setting up a project repository to facilitate collaboration and establish good coding practices among developers?" href="repo-structure-setup.html" />
-    <link rel="prev" title="2. Project Management &amp; Technical Leadership" href="../2-proj-mgmt-tech-lead/overview.html" />
+    <link rel="next" title="6. Modelling" href="../6-modelling/overview.html" />
+    <link rel="prev" title="The End-To-End Workflow Process" href="e2e-workflow.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -151,18 +151,18 @@ const thebe_selector_output = ".output, .cell_output"
    2. Project Management &amp; Technical Leadership
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../3-collab-dev-platforms/overview.html">
    3. Collaborative Development Platforms
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="repo-structure-setup.html">
+    <a class="reference internal" href="../3-collab-dev-platforms/repo-structure-setup.html">
      What are some considerations in setting up a project repository to facilitate collaboration and establish good coding practices among developers?
     </a>
    </li>
@@ -173,23 +173,23 @@ const thebe_selector_output = ".output, .cell_output"
    4. Literature Review
   </a>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../5-data-mgmt-exp-proc/overview.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="overview.html">
    5. Data Management, Exploration &amp; Processing
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../5-data-mgmt-exp-proc/e2e-workflow.html">
+    <a class="reference internal" href="e2e-workflow.html">
      The End-To-End Workflow Process
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../5-data-mgmt-exp-proc/data-mgmt.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      What Kinds of Data Management Solutions Are There, And Which One is Suitable for My Project?
     </a>
    </li>
@@ -366,7 +366,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/3-collab-dev-platforms/overview.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/5-data-mgmt-exp-proc/data-mgmt.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -394,7 +394,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/book/3-collab-dev-platforms/overview.md"
+        <a href="../../_sources/book/5-data-mgmt-exp-proc/data-mgmt.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -454,8 +454,28 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
+  <a class="reference internal nav-link" href="#flat-files">
+   Flat Files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#object-storage">
+   Object Storage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#relational-database">
+   Relational Database
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#non-relational-database">
+   Non-relational Database
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-lakes-vs-data-warehouses">
+   Data Lakes vs Data Warehouses
   </a>
  </li>
 </ul>
@@ -467,7 +487,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>3. Collaborative Development Platforms</h1>
+                <h1>What Kinds of Data Management Solutions Are There, And Which One is Suitable for My Project?</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -478,8 +498,28 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
+  <a class="reference internal nav-link" href="#flat-files">
+   Flat Files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#object-storage">
+   Object Storage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#relational-database">
+   Relational Database
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#non-relational-database">
+   Non-relational Database
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-lakes-vs-data-warehouses">
+   Data Lakes vs Data Warehouses
   </a>
  </li>
 </ul>
@@ -492,15 +532,83 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="collaborative-development-platforms">
-<h1>3. Collaborative Development Platforms<a class="headerlink" href="#collaborative-development-platforms" title="Permalink to this headline">#</a></h1>
-<section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
-<p>This is an overview for getting started with collaborative
-development platforms.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="what-kinds-of-data-management-solutions-are-there-and-which-one-is-suitable-for-my-project">
+<h1>What Kinds of Data Management Solutions Are There, And Which One is Suitable for My Project?<a class="headerlink" href="#what-kinds-of-data-management-solutions-are-there-and-which-one-is-suitable-for-my-project" title="Permalink to this headline">#</a></h1>
+<p>Data comes from various sources, but it is up to us to manage it
+effectively on our side. So it is imperative for us to understand the
+different types of data management solutions and its suitability for
+different datatypes. These solutions include:</p>
+<ul class="simple">
+<li><p>Flat files (CSVs, Excels, SQLite, JSONs, etc.)</p></li>
+<li><p>Object storage (S3, minIO, GCS, etc.)</p></li>
+<li><p>Relational database (SQL and its variants, Microsoft Access, etc.)</p></li>
+<li><p>Non-relational database (Redis, MongoDB, Cassandra, etc.)</p>
+<ul>
+<li><p>This can also be divided into sub-types such as:</p>
+<ul>
+<li><p>Key-value store</p></li>
+<li><p>Wide-column store (“two-dimensional key-value store”)</p></li>
+<li><p>Document store</p></li>
+<li><p>Graph database</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<section id="flat-files">
+<h2>Flat Files<a class="headerlink" href="#flat-files" title="Permalink to this headline">#</a></h2>
+<p>Flat files are the simplest form of a data management solution, and it
+is usually the data type used in ML/DL tutorials. This includes CSVs,
+Excel files, JSONs and SQLite. This form of data is recommended if the
+dataset is small (&lt; 10GB) and/or needs to be portable.</p>
+<p>The use of CSVs, while still prevalent in many tutorials and projects,
+is highly discouraged. CSVs doesn’t store data types and would need to
+be implicitly inferred, which may cause problems when ingesting data
+into your model(s).</p>
 </section>
-<div class="toctree-wrapper compound">
-</div>
+<section id="object-storage">
+<h2>Object Storage<a class="headerlink" href="#object-storage" title="Permalink to this headline">#</a></h2>
+<p>Object storage is a data management solution that relies connecting
+with an API, whether local or remote, and stores data as blobs. This
+is especially suitable for image, audio and video files. This type can
+also accomodate flat file storage, suitable for incoming data that come
+in multiple files. This type of data management solution is usually
+provided directly by cloud providers (S3 from AWS, GCS from GCP, etc.),
+or being provisioned by your organisation’s administrators using
+self-hosted solutions like MinIO.</p>
+</section>
+<section id="relational-database">
+<h2>Relational Database<a class="headerlink" href="#relational-database" title="Permalink to this headline">#</a></h2>
+<p>This should be another familiar form of a data management solution.
+This includes various flavours of SQL servers (MySQL, PostgreSQL,
+MariaDB, etc.). SQLite is also deemed to be a relational database type.
+This is highly recommended for data that can be kept in tabular form
+as well as fairly large sizes (excluding SQLite) since they are
+designed to run under heavy load from multiple clients querying from
+the servers. This also makes having the data being up-to-date easier
+for users since all the querying is done from a single source of data.</p>
+</section>
+<section id="non-relational-database">
+<h2>Non-relational Database<a class="headerlink" href="#non-relational-database" title="Permalink to this headline">#</a></h2>
+<p>This type of data management solution is for the types of data that is
+difficult to store in a structured form like within a SQL database.
+There are many forms of non-relational databases (key-value store,
+document store, wide-column store, graph, etc.), so this is the most
+sophisticated form. This is highly recommended if you need to build a
+data lake that requires high throughput of data into the database
+before processing it into a data warehouse</p>
+</section>
+<section id="data-lakes-vs-data-warehouses">
+<h2>Data Lakes vs Data Warehouses<a class="headerlink" href="#data-lakes-vs-data-warehouses" title="Permalink to this headline">#</a></h2>
+<p>These terms might be thrown around whenever you read about articles
+pertaining to data management, or ML/DL/AI in general. For the sake of
+brevity, you could define data lake as a location to store raw data,
+while a data warehouse can be defined as a location to store processed
+data. Usually a data lake uses a non-relational database to store since
+it is usually built for high-throughput, while you have different forms
+of data management solutions for data warehouses depending on the needs
+of the organisations or your clients.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -516,7 +624,7 @@ development platforms.</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./book/3-collab-dev-platforms"
+            path: "./book/5-data-mgmt-exp-proc"
         },
         predefinedOutput: true
     }
@@ -530,17 +638,17 @@ development platforms.</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../2-proj-mgmt-tech-lead/overview.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="e2e-workflow.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">2. Project Management &amp; Technical Leadership</p>
+            <p class="prev-next-title">The End-To-End Workflow Process</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="repo-structure-setup.html" title="next page">
+    <a class='right-next' id="next-link" href="../6-modelling/overview.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">What are some considerations in setting up a project repository to facilitate collaboration and establish good coding practices among developers?</p>
+        <p class="prev-next-title">6. Modelling</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
