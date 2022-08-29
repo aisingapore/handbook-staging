@@ -2,9 +2,9 @@ name: push-to-staging
 
 on:
   push:
-    branches: staging-site
+    branches: develop
   pull_request:
-    branches: staging-site
+    branches: develop
 
 jobs:
   build:
