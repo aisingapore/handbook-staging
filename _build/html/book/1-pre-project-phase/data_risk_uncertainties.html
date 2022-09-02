@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>5. Data Management, Exploration &amp; Processing &#8212; AI Practitioner Handbook</title>
+    <title>What are the potential data risks/uncertainties that the AI engineer will be inheriting from the project? &#8212; AI Practitioner Handbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="The End-To-End Workflow Process" href="e2e-workflow.html" />
-    <link rel="prev" title="4. Literature Review" href="../4-lit-review/overview.html" />
+    <link rel="next" title="2. Project Management &amp; Technical Leadership" href="../2-proj-mgmt-tech-lead/overview.html" />
+    <link rel="prev" title="How does the AI engineer translate the business challenge into an AI problem?" href="business_challenge_2_ai_problem.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -124,23 +124,23 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../1-pre-project-phase/overview.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="overview.html">
    1. Pre-project Phase
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../1-pre-project-phase/business_challenge_2_ai_problem.html">
+    <a class="reference internal" href="business_challenge_2_ai_problem.html">
      How does the AI engineer translate the business challenge into an AI problem?
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../1-pre-project-phase/data_risk_uncertainties.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      What are the potential data risks/uncertainties that the AI engineer will be inheriting from the project?
     </a>
    </li>
@@ -173,23 +173,23 @@ const thebe_selector_output = ".output, .cell_output"
    4. Literature Review
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../5-data-mgmt-exp-proc/overview.html">
    5. Data Management, Exploration &amp; Processing
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="e2e-workflow.html">
+    <a class="reference internal" href="../5-data-mgmt-exp-proc/e2e-workflow.html">
      The End-To-End Workflow Process
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="data-mgmt.html">
+    <a class="reference internal" href="../5-data-mgmt-exp-proc/data-mgmt.html">
      What Kinds of Data Management Solutions Are There, And Which One is Suitable for My Project?
     </a>
    </li>
@@ -366,7 +366,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/5-data-mgmt-exp-proc/overview.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/1-pre-project-phase/data_risk_uncertainties.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -394,7 +394,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/book/5-data-mgmt-exp-proc/overview.md"
+        <a href="../../_sources/book/1-pre-project-phase/data_risk_uncertainties.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -454,8 +454,35 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
+  <a class="reference internal nav-link" href="#data-risks-uncertainties">
+   Data Risks/Uncertainties
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quote-from-andrew-ng">
+     Quote from Andrew Ng
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#does-the-data-include-features-that-can-predict-the-target">
+     1. Does the data include features that can predict the target?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#do-you-have-the-label-data">
+     2. Do you have the label data?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#do-you-have-the-correct-granularity-of-the-data">
+     3. Do you have the correct granularity of the data?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
   </a>
  </li>
 </ul>
@@ -467,7 +494,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>5. Data Management, Exploration & Processing</h1>
+                <h1>What are the potential data risks/uncertainties that the AI engineer will be inheriting from the project?</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -478,8 +505,35 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
+  <a class="reference internal nav-link" href="#data-risks-uncertainties">
+   Data Risks/Uncertainties
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quote-from-andrew-ng">
+     Quote from Andrew Ng
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#does-the-data-include-features-that-can-predict-the-target">
+     1. Does the data include features that can predict the target?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#do-you-have-the-label-data">
+     2. Do you have the label data?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#do-you-have-the-correct-granularity-of-the-data">
+     3. Do you have the correct granularity of the data?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
   </a>
  </li>
 </ul>
@@ -492,36 +546,44 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="data-management-exploration-processing">
-<h1>5. Data Management, Exploration &amp; Processing<a class="headerlink" href="#data-management-exploration-processing" title="Permalink to this headline">#</a></h1>
-<section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
-<p>This is an overview for how a team can manage data, do some
-exploratory analyses with it and process it for the stages to follow.</p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="e2e-workflow.html"><span class="doc std std-doc">The End-To-End Workflow Process</span></a>
-=======</p></li>
-<li><p><a class="reference internal" href="data-mgmt.html"><span class="doc std std-doc">Types and Suitability of Data Management</span></a></p></li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="what-are-the-potential-data-risks-uncertainties-that-the-ai-engineer-will-be-inheriting-from-the-project">
+<h1>What are the potential data risks/uncertainties that the AI engineer will be inheriting from the project?<a class="headerlink" href="#what-are-the-potential-data-risks-uncertainties-that-the-ai-engineer-will-be-inheriting-from-the-project" title="Permalink to this headline">#</a></h1>
+<p>Contributor: Tan Kwan Chet</p>
+<hr class="docutils" />
+<section id="data-risks-uncertainties">
+<h2>Data Risks/Uncertainties<a class="headerlink" href="#data-risks-uncertainties" title="Permalink to this headline">#</a></h2>
+<p>Having understood the business challenge and AI problem at hand, this is where you need to delve into understanding the data the sponsor has collected. You need to assess if there are risks/uncertainties posed within the data collected and annotated for solving the AI problem. Because a good AI model not only relies on algorithms but also quality data.</p>
+<section id="quote-from-andrew-ng">
+<h3>Quote from Andrew Ng<a class="headerlink" href="#quote-from-andrew-ng" title="Permalink to this headline">#</a></h3>
 <blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><p>origin/ch5-issue30</p>
+<div><p>AI systems need both code and data, and “all that progress in algorithms means it’s actually time to spend more time on the data,” Ng said at the recent EmTech Digital conference hosted by MIT Technology Review.</p>
 </div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
+<p>Here are 3 questions good for uncovering potential data risks/uncertainties:</p>
 </section>
-<div class="toctree-wrapper compound">
-</div>
+<section id="does-the-data-include-features-that-can-predict-the-target">
+<h3>1. Does the data include features that can predict the target?<a class="headerlink" href="#does-the-data-include-features-that-can-predict-the-target" title="Permalink to this headline">#</a></h3>
+<p>It is important to identify if there are relevant features to construct the AI model. For example, in the case of detecting fraudulent transactions, these features may include, but not limited to, transaction amount and transaction purpose based on domain knowledge. Another way is to create a correlation plot (example chart below) between numerical features and the target variable where the relevant features have a correlation value that is not (or close to) 0. Or, you could plot a bivariate plot between categorical feature and the target variable to observe if there is any correlation.</p>
+<p><img alt="Corrplot" src="../../_images/corrplot_chart.png" /></p>
+</section>
+<section id="do-you-have-the-label-data">
+<h3>2. Do you have the label data?<a class="headerlink" href="#do-you-have-the-label-data" title="Permalink to this headline">#</a></h3>
+<p>Having labels is not sufficient if the label proportion is imbalanced. This would result in training an AI model biased towards the majority class. This is because the AI model is trained on limited examples to identify the minority class. But, if it is a regression target, it is ideal to have different ranges of values. You want to avoid training a regression model on the data that has clear discrete values (in the chart below). For examples, if you observe the target variable centres around 1 or 2 values such as 5 or 10, then it would be better to treat the variable as a categorical one.</p>
+<p><img alt="Discreteplot" src="../../_images/discreteplot_chart.png" /></p>
+</section>
+<section id="do-you-have-the-correct-granularity-of-the-data">
+<h3>3. Do you have the correct granularity of the data?<a class="headerlink" href="#do-you-have-the-correct-granularity-of-the-data" title="Permalink to this headline">#</a></h3>
+<p>It is critical to ensure that the training data and production data share the same level of granularity (e.g. hourly, daily, weekly, monthly or yearly) as what your sponsor expects in prediction. So if the sponsor expects the prediction on an hourly basis and the sponsor collects the data daily, then it will not be possible to build such an AI model to produce a granular prediction based on aggregated data. It is also worthy to note that if expected prediction is at a higher or similar granularity as the training or production data, then it is possible to build an AI model.</p>
+<p><img alt="GranularityDiagram" src="../../_images/granularity_diagram.jpg" /></p>
+</section>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.deeplearning.ai/wp-content/uploads/2021/06/MLOps-From-Model-centric-to-Data-centric-AI.pdf">MLOps-From-Model-centric-to-Data-centric-AI</a></p></li>
+<li><p><a class="reference external" href="https://mitsloan.mit.edu/ideas-made-to-matter/why-its-time-data-centric-artificial-intelligence">Why it’s time for ‘data-centric artificial intelligence’</a></p></li>
+<li><p><a class="reference external" href="https://services.google.com/fh/files/blogs/data-prep-checklist-ml-bd-wp-v2.pdf">Is My Data Any Good? A Pre-ML Checklist</a></p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -537,7 +599,7 @@ exploratory analyses with it and process it for the stages to follow.</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./book/5-data-mgmt-exp-proc"
+            path: "./book/1-pre-project-phase"
         },
         predefinedOutput: true
     }
@@ -551,17 +613,17 @@ exploratory analyses with it and process it for the stages to follow.</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../4-lit-review/overview.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="business_challenge_2_ai_problem.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">4. Literature Review</p>
+            <p class="prev-next-title">How does the AI engineer translate the business challenge into an AI problem?</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="e2e-workflow.html" title="next page">
+    <a class='right-next' id="next-link" href="../2-proj-mgmt-tech-lead/overview.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">The End-To-End Workflow Process</p>
+        <p class="prev-next-title">2. Project Management &amp; Technical Leadership</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
