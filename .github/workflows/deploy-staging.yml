@@ -1,5 +1,3 @@
-# Note: This work is intended to run on the staging repo when it gets pushed during
-# the push-to-staging workflow. It is not intended to run on the main repo
 name: deploy-staging
 
 on:
