@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>The End-To-End Workflow Process &#8212; AI Practitioner Handbook</title>
+    <title>What are the Processes Involved to Build a Basic End-to-End Workflow? &#8212; AI Practitioner Handbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="What Kinds of Data Management Solutions Are There, And Which One is Suitable for My Project?" href="data-mgmt.html" />
+    <link rel="next" title="How do I Enhance the Workflow with Quality-of-Life Improvements for My End-to-End Workflow?" href="e2e-workflow-adv.html" />
     <link rel="prev" title="5. Data Management, Exploration &amp; Processing" href="overview.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -185,12 +185,12 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     The End-To-End Workflow Process
+     What are the Processes Involved to Build a Basic End-to-End Workflow?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="data-mgmt.html">
-     What Kinds of Data Management Solutions Are There, And Which One is Suitable for My Project?
+    <a class="reference internal" href="e2e-workflow-adv.html">
+     How do I Enhance the Workflow with Quality-of-Life Improvements for My End-to-End Workflow?
     </a>
    </li>
   </ul>
@@ -484,36 +484,9 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#other-components-and-processes">
-   Other Components and Processes
+  <a class="reference internal nav-link" href="#final-thoughts">
+   Final Thoughts
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#artifact-storage-governance">
-     Artifact Storage &amp; Governance
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ci-cd">
-     CI/CD
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#model-registry">
-     Model Registry
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#container-registry">
-     Container Registry
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#model-monitoring">
-     Model Monitoring
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -524,7 +497,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>The End-To-End Workflow Process</h1>
+                <h1>What are the Processes Involved to Build a Basic End-to-End Workflow?</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -565,36 +538,9 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#other-components-and-processes">
-   Other Components and Processes
+  <a class="reference internal nav-link" href="#final-thoughts">
+   Final Thoughts
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#artifact-storage-governance">
-     Artifact Storage &amp; Governance
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ci-cd">
-     CI/CD
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#model-registry">
-     Model Registry
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#container-registry">
-     Container Registry
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#model-monitoring">
-     Model Monitoring
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -606,14 +552,12 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="the-end-to-end-workflow-process">
-<h1>The End-To-End Workflow Process<a class="headerlink" href="#the-end-to-end-workflow-process" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="what-are-the-processes-involved-to-build-a-basic-end-to-end-workflow">
+<h1>What are the Processes Involved to Build a Basic End-to-End Workflow?<a class="headerlink" href="#what-are-the-processes-involved-to-build-a-basic-end-to-end-workflow" title="Permalink to this headline">#</a></h1>
 <p>Contributor(s): Syakyr Surani, Ryzal Kamis</p>
 <p>This guide assumes that you know basic data engineering and ML/DL
 modelling, and you want to start to build a workflow so that you have
-a working AI-powered product at the end of the project. Also, you might
-want to scale up your workflow while increasing robustness and
-reliability.</p>
+a working AI-powered product at the end of the project.</p>
 <section id="what-does-it-mean-to-have-an-end-to-end-workflow">
 <h2>What Does It Mean to Have an End-to-End Workflow<a class="headerlink" href="#what-does-it-mean-to-have-an-end-to-end-workflow" title="Permalink to this headline">#</a></h2>
 <p>When you started learning about ML, most likely you were only taught to
@@ -665,8 +609,10 @@ for your project, this simplified flowchart would be more suitable:</p>
     verctl --&gt; devwspace
     devwspace --&gt; modelexp
     modelexp ---&gt; modelserv
-        </div><p>This guide will focus more on the simplified flowchart while expanding
-the topic from there.</p>
+        </div><p>This guide will focus more on the simplified flowchart. If you are
+looking for what the components represent in the typical end-to-end
+workflow but not present in the simplified one, you can refer to
+<a class="reference internal" href="e2e-workflow-adv.html"><span class="doc std std-doc">this section instead</span></a>.</p>
 </section>
 <section id="data-storage">
 <h2>Data Storage<a class="headerlink" href="#data-storage" title="Permalink to this headline">#</a></h2>
@@ -690,6 +636,8 @@ sheets, but directly processing them before feeding into the model may
 be suboptimal when you could parallise both processes and possibly
 reducing training time. This may also make resuming work easier since
 there are more checkpoints between the raw data and the model itself.</p>
+<p>You can check <span class="xref myst">this section</span> for more information on
+data storage options.</p>
 </section>
 <section id="version-control">
 <h2>Version Control<a class="headerlink" href="#version-control" title="Permalink to this headline">#</a></h2>
@@ -698,8 +646,11 @@ errors by rolling back changes to a known working source. You may
 already have been exposed to it through GitHub or GitLab, which are the
 leading platforms for source code management especially for open source
 projects. Understanding how to use version control effectively would
-make the end-to-end workflow easier. Refer to another part of this
-handbook for more information regarding this process.</p>
+make the end-to-end workflow easier.</p>
+<p>For AI practitioners such as ourselves, there is also a subset of
+version control that targets toward datasets, which you may read
+<a class="reference external" href="https://lakefs.io/data-versioning/">this article</a> for more
+information.</p>
 </section>
 <section id="developer-workspace">
 <h2>Developer Workspace<a class="headerlink" href="#developer-workspace" title="Permalink to this headline">#</a></h2>
@@ -708,7 +659,10 @@ also be quite complex, especially pertaining to authentication and
 authorisation protocols that your organisation, or client, may have.
 Some reasons may be due to data being sensitive, the machine being
 airgapped, or that the code must be compatible with legacy hardware
-that you cannot interact directly with.</p>
+that you cannot interact directly with. Therefore, you may need to
+check with your project objectives and guidelines to see whether you
+may need to deploy a remote developer workspace as part of your project
+infrastructure depending on those protocols.</p>
 </section>
 <section id="model-experimentation">
 <h2>Model Experimentation<a class="headerlink" href="#model-experimentation" title="Permalink to this headline">#</a></h2>
@@ -728,50 +682,13 @@ machines rather than only within one machine. These APIs may usually
 use either the REST or gRPC protocol. You would have to decide which
 method is more suitable for your project.</p>
 </section>
-<section id="other-components-and-processes">
-<h2>Other Components and Processes<a class="headerlink" href="#other-components-and-processes" title="Permalink to this headline">#</a></h2>
-<p>This section deals with the other components and processes that are
-present in the first workflow, but not the other.</p>
-<section id="artifact-storage-governance">
-<h3>Artifact Storage &amp; Governance<a class="headerlink" href="#artifact-storage-governance" title="Permalink to this headline">#</a></h3>
-<p>Artifacts pertain to data that are not used in training the models in
-your project. This can be your configuration settings, logs, etc. On
-the other hand, data and artifact governance refers to the
-authentication and authorisation protocols that are discussed
-previously in the <a class="reference external" href="#developer-workspace">Developer Workspace</a> section.</p>
-</section>
-<section id="ci-cd">
-<h3>CI/CD<a class="headerlink" href="#ci-cd" title="Permalink to this headline">#</a></h3>
-<p>Continuous integration and continuous delivery/deployment processes
-pertain to the automation of various processes within the workflow
-itself. While this would benefit end-to-end workflows greatly, it is
-not implemented within many ML/DL projects due to its complexity and
-time needed to design an effective CI/CD process, and therefore not
-part of the simplified workflow.</p>
-</section>
-<section id="model-registry">
-<h3>Model Registry<a class="headerlink" href="#model-registry" title="Permalink to this headline">#</a></h3>
-<p>This could be seen as a version control for models to manage problems
-such as model drifting and retraining. This is omitted in the
-simplified workflow as small ML/DL projects would benefit little from
-this as compared to other components.</p>
-</section>
-<section id="container-registry">
-<h3>Container Registry<a class="headerlink" href="#container-registry" title="Permalink to this headline">#</a></h3>
-<p>Containers such as Docker abstracts the codebase while providing a
-sandbox to reduce dependency conflicts while making component
-management easier. This is omitted in the simplified workflow as some
-policies within your organisation/client may be against this process
-due to the overheads it may have, especially if the project does not
-require to be designed for scaling.</p>
-</section>
-<section id="model-monitoring">
-<h3>Model Monitoring<a class="headerlink" href="#model-monitoring" title="Permalink to this headline">#</a></h3>
-<p>This process is needed should you need to monitor issues while serving
-the model such as model drifting. These metrics would be collected and
-processed to make decisions such as controlling data input requirements
-or retraining the model.</p>
-</section>
+<section id="final-thoughts">
+<h2>Final Thoughts<a class="headerlink" href="#final-thoughts" title="Permalink to this headline">#</a></h2>
+<p>There are many components and processes that can be part of your
+project’s end-to-end workflow, but if you are starting out on the
+development process, this guide has recommended the processes you would
+want to focus on before expanding on other quality-of-life improvements
+that are described in <a class="reference internal" href="e2e-workflow-adv.html"><span class="doc std std-doc">this section instead</span></a>.</p>
 </section>
 </section>
 
@@ -809,10 +726,10 @@ or retraining the model.</p>
             <p class="prev-next-title">5. Data Management, Exploration &amp; Processing</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="data-mgmt.html" title="next page">
+    <a class='right-next' id="next-link" href="e2e-workflow-adv.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">What Kinds of Data Management Solutions Are There, And Which One is Suitable for My Project?</p>
+        <p class="prev-next-title">How do I Enhance the Workflow with Quality-of-Life Improvements for My End-to-End Workflow?</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
