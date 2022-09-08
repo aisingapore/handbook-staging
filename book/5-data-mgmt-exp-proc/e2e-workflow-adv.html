@@ -467,23 +467,21 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#ci-cd">
    CI/CD
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#model-registry">
-     Model Registry
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#container-registry">
-     Container Registry
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#experiment-pipeline-model-monitoring-tracking">
-     Experiment, Pipeline &amp; Model Monitoring/Tracking
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-registry">
+   Model Registry
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#container-registry">
+   Container Registry
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#experiment-pipeline-model-monitoring-tracking">
+   Experiment, Pipeline &amp; Model Monitoring/Tracking
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#final-thoughts">
@@ -523,23 +521,21 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#ci-cd">
    CI/CD
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#model-registry">
-     Model Registry
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#container-registry">
-     Container Registry
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#experiment-pipeline-model-monitoring-tracking">
-     Experiment, Pipeline &amp; Model Monitoring/Tracking
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-registry">
+   Model Registry
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#container-registry">
+   Container Registry
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#experiment-pipeline-model-monitoring-tracking">
+   Experiment, Pipeline &amp; Model Monitoring/Tracking
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#final-thoughts">
@@ -616,8 +612,9 @@ itself. While this would benefit end-to-end workflows greatly, it is
 not implemented within many ML/DL projects due to its complexity and
 time needed to design an effective CI/CD process. If you do want to
 know more about CI/CD, you can refer to <a class="reference internal" href="../7-solution-delivery/min-viable-code.html"><span class="doc std std-doc">this section</span></a> instead.</p>
+</section>
 <section id="model-registry">
-<h3>Model Registry<a class="headerlink" href="#model-registry" title="Permalink to this headline">#</a></h3>
+<h2>Model Registry<a class="headerlink" href="#model-registry" title="Permalink to this headline">#</a></h2>
 <p>This could be seen as a version control for models to manage problems
 such as model drifting and retraining. You may need this component as
 your project scales up, and you need to manage multiple models within
@@ -627,7 +624,7 @@ could reference multiple versions of the same model to gauge any
 improvements a new version may provide.</p>
 </section>
 <section id="container-registry">
-<h3>Container Registry<a class="headerlink" href="#container-registry" title="Permalink to this headline">#</a></h3>
+<h2>Container Registry<a class="headerlink" href="#container-registry" title="Permalink to this headline">#</a></h2>
 <p>Containers such as Docker abstracts the codebase while providing a
 sandbox to reduce dependency conflicts while making component
 management easier. This allows better scaling and modularity by
@@ -639,7 +636,7 @@ overheads it may have, especially if the project does not require to be
 designed for scaling.</p>
 </section>
 <section id="experiment-pipeline-model-monitoring-tracking">
-<h3>Experiment, Pipeline &amp; Model Monitoring/Tracking<a class="headerlink" href="#experiment-pipeline-model-monitoring-tracking" title="Permalink to this headline">#</a></h3>
+<h2>Experiment, Pipeline &amp; Model Monitoring/Tracking<a class="headerlink" href="#experiment-pipeline-model-monitoring-tracking" title="Permalink to this headline">#</a></h2>
 <p>The experiment and pipeline tracking as well as model monitoring can be
 seen as similar components that target different processes. Experiment
 and pipeline tracking focuses more towards monitoring the models as
@@ -651,7 +648,6 @@ models and see whether issues are present while it is used for
 inference such as model drifting. These metrics would be collected and
 processed to make decisions such as controlling data input requirements
 or retraining the model.</p>
-</section>
 </section>
 <section id="final-thoughts">
 <h2>Final Thoughts<a class="headerlink" href="#final-thoughts" title="Permalink to this headline">#</a></h2>
