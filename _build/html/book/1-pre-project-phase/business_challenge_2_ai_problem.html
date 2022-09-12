@@ -460,7 +460,7 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#framing-problem-statement-from-the-business-challenge">
-   Framing Problem Statement from The Business Challenge
+   Framing Problem Statement from the Business Challenge
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -508,7 +508,7 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#framing-problem-statement-from-the-business-challenge">
-   Framing Problem Statement from The Business Challenge
+   Framing Problem Statement from the Business Challenge
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -547,12 +547,12 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="how-does-the-ai-engineer-translate-the-business-challenge-into-an-ai-problem">
 <h1>How does the AI engineer translate the business challenge into an AI problem?<a class="headerlink" href="#how-does-the-ai-engineer-translate-the-business-challenge-into-an-ai-problem" title="Permalink to this headline">#</a></h1>
-<p>Contributor: Tan Kwan Chet</p>
+<p>Contributor: Tan Kwan Chet, Lead AI Technical Consultant</p>
 <hr class="docutils" />
 <section id="framing-problem-statement-from-the-business-challenge">
-<h2>Framing Problem Statement from The Business Challenge<a class="headerlink" href="#framing-problem-statement-from-the-business-challenge" title="Permalink to this headline">#</a></h2>
+<h2>Framing Problem Statement from the Business Challenge<a class="headerlink" href="#framing-problem-statement-from-the-business-challenge" title="Permalink to this headline">#</a></h2>
 <p>Most projects begin when a sponsor has 1 or a few business challenges to solve. As an outsider, understanding business context and process is a great starting point to frame the AI problem. It allows you to understand the sponsor’s long term goal and identify the problem statement that affects the sponsor’s business or represents a pain point that the sponsor wants to solve.</p>
-<p>It takes a lot of creativity to formulate the problem statement. Sponsor tends to speak about their business problems at a high level. So your job is to filter the high level information shared by sponsor to a low level where the problem may relate to their employees who face the pain point on a day-to-day basis. This is important since your AI solution will likely be replacing a repetitive task that their employees may be facing. To form the problem statement, you could use the following steps (illustrated as a map diagram below):</p>
+<p>It takes a lot of creativity to formulate the problem statement. Sponsor tends to speak about their business problems at a high level. So your job is to filter the high level information shared by sponsor to a low level where the problem may relate to their employees who face the pain point on a day-to-day basis. This is important since your AI solution will likely be replacing a repetitive task that their employees may be facing. To form the problem statement, AI Singapore uses concepts from Design Thinking methodology and Design Sprint to help in this could use the following steps (illustrated as a map diagram below):</p>
 <ol class="simple">
 <li><p>Identify the target audience (e.g. employee)</p></li>
 <li><p>Define the problem from target audience’s perspective (i.e. understand their pain point)</p></li>
@@ -579,31 +579,40 @@ title="Print to PDF"
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>what is the main task that you are keen to replace?</p></td>
+<tr class="row-even"><td><p>What is the main task that you are keen to replace?</p></td>
 <td><p>This gives you an idea on what is the main task that AI needs to automate</p></td>
 <td><p>AI model to detect cells by size</p></td>
 </tr>
 <tr class="row-odd"><td><p>What is the type of the data involved?</p></td>
-<td><p>By knowing if the data is image/video, text or tabular, it will help you focus on a set of technologies such as Computer Vision and Natural Language Processing</p></td>
-<td><p>Annotation required to support the detection of cells in images</p></td>
+<td><p>By knowing if the data is image/video, text, tabular or multimodal, it will help you narrow down to the appropriate AI domain/models to focus on</p></td>
+<td><p>Images of cells taken under microscope</p></td>
 </tr>
-<tr class="row-even"><td><p>Is the main task achievable by AI model alone?</p></td>
-<td><p>You check if there is a need to use heuristic method</p></td>
-<td><p>Aggregate counts of the AI model predictions by prediction class</p></td>
+<tr class="row-even"><td><p>What is the output required?</p></td>
+<td><p>By knowing specifically how the business needs the outputs returned to them, it will help you select the correct algorithm and design the appropriate annotation format</p></td>
+<td><p>Masks drawn around detected cells and size estimated -&gt; Computer Vision instance segmentation model</p></td>
 </tr>
-<tr class="row-odd"><td><p>How do you envision to use the AI model?</p></td>
+<tr class="row-odd"><td><p>Is the main task achievable by AI model alone?</p></td>
+<td><p>You can check if there is a need to use heuristic method or rule-based methods in conjunction with the AI model in order to reach the required outcome</p></td>
+<td><p>Apply pixel:nm size conversion to estimate actual sizes of detected objects and group them into classes</p></td>
+</tr>
+<tr class="row-even"><td><p>How do you envision to use the AI model?</p></td>
 <td><p>You understand how the sponsor uses the AI model</p></td>
 <td><p>This gives you an insight into their deployment infrastructures</p></td>
 </tr>
+<tr class="row-odd"><td><p>How will the AI model fit into your business processes?</p></td>
+<td><p>This helps you to understand how the sponsor will use the AI model, in terms of what applications it will connect to, how often inference will be run, and how much human involvement there will be</p></td>
+<td><p>Description of high level application architecture diagram and infrastructure requirements</p></td>
+</tr>
 </tbody>
 </table>
-<p>Now, you will have gain an understanding into the business challenge and the AI problem. This will give you a coverage of what the sponsor hopes to achieve from its envisioned AI model.</p>
+<p>With these, you will have gained a better understanding of the business challenge and how it translates into the AI problem. This will give you a coverage of what the sponsor hopes to achieve from its envisioned AI model.</p>
 </section>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.thesprintbook.com/the-design-sprint">Sprint: How to Solve Big Problems and Test New Ideas in Just Five Days</a></p></li>
+<li><p><a class="reference external" href="https://www.thoughtworks.com/insights/blog/experience-design/design--together">Design, Together</a></p></li>
 <li><p><a class="reference external" href="https://www.oreilly.com/library/view/data-science-for/9781449374273/">Data Science for Business</a></p></li>
 </ul>
 </section>

@@ -464,8 +464,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data">
-   Data
+  <a class="reference internal nav-link" href="#data-model-outputs">
+   Data &amp; Model Outputs
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -503,8 +503,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data">
-   Data
+  <a class="reference internal nav-link" href="#data-model-outputs">
+   Data &amp; Model Outputs
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -544,6 +544,11 @@ title="Print to PDF"
 </ul>
 </li>
 <li><p>Are there any restrictions or preferences regarding the operating system on which the solution should be deployed?</p></li>
+<li><p>Are there any restrictions on software licenses to be used?</p>
+<ul class="simple">
+<li><p>Many open source libraries used in machine learning projects are licensed under Apache 2.0, MIT and BSD licenses. If your solution requires the use of libraries with less permissive licenses, it would be best to check with the project sponsor.</p></li>
+</ul>
+</li>
 <li><p>Would a staging environment or test device be provided for developers to test with prior to initial deployment?</p>
 <ul class="simple">
 <li><p>If not provided, you would need to commission an internal environment that closely mirrors the specifications of the environment on which the solution would eventually be deployed.</p></li>
@@ -551,10 +556,10 @@ title="Print to PDF"
 </li>
 </ol>
 </section>
-<section id="data">
-<h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">#</a></h2>
+<section id="data-model-outputs">
+<h2>Data &amp; Model Outputs<a class="headerlink" href="#data-model-outputs" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
-<li><p>Where would the data to be used for retraining and inference be located in the production environment?</p></li>
+<li><p>Where would the data to be used for retraining and inference be located in the deployment environment?</p></li>
 <li><p>Where would the model outputs be stored? Is there any storage size limit on this location?</p></li>
 <li><p>If the data storage is located remotely, what is the authentication method to be used to access it?</p></li>
 </ol>
@@ -562,7 +567,11 @@ title="Print to PDF"
 <section id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
-<li><p>What is the frequency at which the user intends to run the retraining and inference pipelines?</p></li>
+<li><p>What is the frequency at which the user intends to run the retraining and inference pipelines?</p>
+<ul class="simple">
+<li><p>Generally, the requirements and considerations for inference are more critical compared to retraining, as the latter is usually performed less frequently and is less time-sensitive.</p></li>
+</ul>
+</li>
 <li><p>Is batch inference a requirement? If so, what is the expected size or volume of data in a single batch?</p></li>
 <li><p>What are the requirements on inference speed and training time?</p>
 <ul class="simple">
