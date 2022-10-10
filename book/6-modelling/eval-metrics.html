@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>What are the Processes Involved in Building a Basic End-to-End Workflow? &#8212; AI Practitioner Handbook</title>
+    <title>What are the considerations (internally by the team), and externally (by the shareholders) when selecting evaluation metrics? &#8212; AI Practitioner Handbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,12 +50,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
     <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="How do I Enhance the Workflow with Quality-of-Life Improvements for My End-to-End Workflow?" href="e2e-workflow-adv.html" />
-    <link rel="prev" title="Potential scenarios of bias, unfairness, data leakage in data splits and suggestions to remedy" href="data-splits-bias-fairness-leakage.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -123,7 +123,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../1-pre-project-phase/overview.html">
    1. Pre-project Phase
@@ -195,50 +195,50 @@ const thebe_selector_output = ".output, .cell_output"
    4. Literature Review
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="overview.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../5-data-mgmt-exp-proc/overview.html">
    5. Data Management, Exploration &amp; Processing
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="data-mgmt.html">
+    <a class="reference internal" href="../5-data-mgmt-exp-proc/data-mgmt.html">
      Which data storage options are suitable for the project?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="data-splits.html">
+    <a class="reference internal" href="../5-data-mgmt-exp-proc/data-splits.html">
      What are the various data split strategies?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="data-splits-bias-fairness-leakage.html">
+    <a class="reference internal" href="../5-data-mgmt-exp-proc/data-splits-bias-fairness-leakage.html">
      Potential scenarios of bias, unfairness, data leakage in data splits and suggestions to remedy
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5-data-mgmt-exp-proc/e2e-workflow.html">
      What are the Processes Involved in Building a Basic End-to-End Workflow?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="e2e-workflow-adv.html">
+    <a class="reference internal" href="../5-data-mgmt-exp-proc/e2e-workflow-adv.html">
      How do I Enhance the Workflow with Quality-of-Life Improvements for My End-to-End Workflow?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="data-poisoning-data-extraction.html">
+    <a class="reference internal" href="../5-data-mgmt-exp-proc/data-poisoning-data-extraction.html">
      What to look out for in my data sources to reduce the risks of data poisoning and data extraction?
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../6-modelling/overview.html">
+  <a class="reference internal" href="overview.html">
    6. Modelling
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
@@ -248,7 +248,7 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../6-modelling/model-reproducibility.html">
+    <a class="reference internal" href="model-reproducibility.html">
      What are the checklist of items to look out for to ensure reproducibility of the model pipeline as much as possible?
     </a>
    </li>
@@ -420,7 +420,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/5-data-mgmt-exp-proc/e2e-workflow.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/6-modelling/eval-metrics.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -448,7 +448,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/book/5-data-mgmt-exp-proc/e2e-workflow.md"
+        <a href="../../_sources/book/6-modelling/eval-metrics.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -507,44 +507,29 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-does-it-mean-to-have-an-end-to-end-workflow">
-   What Does It Mean to Have an End-to-End Workflow
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   What are the considerations (internally by the team), and externally (by the shareholders) when selecting evaluation metrics?
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-storage">
-   Data Storage
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#high-level-metrics-for-classification-problems">
+   High level metrics (for classification problems)
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#version-control">
-   Version Control
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#high-level-metrics-for-regression-problems">
+   High level metrics (for regression problems)
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#developer-workspace">
-   Developer Workspace
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-depth-metrics">
+   In-depth metrics
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#model-experimentation">
-   Model Experimentation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#model-serving">
-   Model Serving
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#final-thoughts">
-   Final Thoughts
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference">
+   Reference
   </a>
  </li>
 </ul>
@@ -556,7 +541,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>What are the Processes Involved in Building a Basic End-to-End Workflow?</h1>
+                <h1>What are the considerations (internally by the team), and externally (by the shareholders) when selecting evaluation metrics?</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -566,44 +551,29 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-does-it-mean-to-have-an-end-to-end-workflow">
-   What Does It Mean to Have an End-to-End Workflow
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   What are the considerations (internally by the team), and externally (by the shareholders) when selecting evaluation metrics?
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-storage">
-   Data Storage
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#high-level-metrics-for-classification-problems">
+   High level metrics (for classification problems)
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#version-control">
-   Version Control
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#high-level-metrics-for-regression-problems">
+   High level metrics (for regression problems)
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#developer-workspace">
-   Developer Workspace
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-depth-metrics">
+   In-depth metrics
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#model-experimentation">
-   Model Experimentation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#model-serving">
-   Model Serving
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#final-thoughts">
-   Final Thoughts
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference">
+   Reference
   </a>
  </li>
 </ul>
@@ -616,154 +586,119 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="what-are-the-processes-involved-in-building-a-basic-end-to-end-workflow">
-<h1>What are the Processes Involved in Building a Basic End-to-End Workflow?<a class="headerlink" href="#what-are-the-processes-involved-in-building-a-basic-end-to-end-workflow" title="Permalink to this headline">#</a></h1>
-<p>Contributor(s): Syakyr Surani, Platforms Engineer &amp; Ryzal Kamis, Assistant Head (MLOps)</p>
-<p>This guide assumes that you know basic data engineering and ML/DL
-modelling, and you want to start to build a workflow so that you have
-a working AI-powered product at the end of the project.</p>
-<section id="what-does-it-mean-to-have-an-end-to-end-workflow">
-<h2>What Does It Mean to Have an End-to-End Workflow<a class="headerlink" href="#what-does-it-mean-to-have-an-end-to-end-workflow" title="Permalink to this headline">#</a></h2>
-<p>When you started learning about ML, most likely you were only taught to
-train a model or perhaps to clean the data before training. Having an
-end-to-end workflow means you have a birds-eye view on the whole
-project from conception to deployment. This means you can delegate
-tasks better and diagnose issues much more effectively rather than
-overhauling the whole project when something unexpected happens and
-renders the project undeployable or unusable.</p>
-<p>The flowchart below describes a typical end-to-end workflow of an ML
-project:</p>
-<div class="mermaid">
-            flowchart TD
-    cicd(CI/CD)
-    datastorage[(Data/Artifact Storage &amp; Governance)]
-    verctl[(Version Control)]
-    devwspace[Developer Workspace]
-    modelexp(Model Experimentation)
-    modelreg[(Model Registry)]
-    contreg[(Container Registry)]
-    exptrack(Experiment &amp; Pipeline Tracking)
-    modelserv[(Model Serving)]
-    modelmon(Model Monitoring)
-    style cicd fill:#bbf
-    style modelreg fill:#bbf
-    style contreg fill:#bbf
-    style exptrack fill:#bbf
-    style modelmon fill:#bbf
-    cicd &lt;---&gt; modelexp
-    datastorage &lt;---&gt; modelexp
-    datastorage &lt;---&gt; modelreg
-    datastorage &lt;-.-&gt; verctl
-    verctl &lt;.-&gt; modelreg
-    verctl --&gt; devwspace
-    verctl &lt;---&gt; contreg
-    devwspace --&gt; modelexp
-    modelexp --&gt; modelreg
-    modelexp &lt;---&gt; contreg
-    modelexp ---&gt; exptrack
-    modelreg ---&gt; modelserv
-    contreg &lt;--&gt; modelserv
-    modelserv ---&gt; modelmon
-        </div><p>However, if you’re just starting out in building an end-to-end workflow
-for your project, this simplified flowchart would be more suitable:</p>
-<div class="mermaid">
-            flowchart TD
-    datastorage[(Data Storage)]
-    verctl[(Version Control)]
-    devwspace[Developer Workspace]
-    modelexp(Model Experimentation)
-    modelserv[(Model Serving)]
-    datastorage &lt;---&gt; modelexp
-    datastorage &lt;-.-&gt; verctl
-    verctl --&gt; devwspace
-    devwspace --&gt; modelexp
-    modelexp ---&gt; modelserv
-        </div><p>This guide will focus more on the simplified flowchart. If you are
-looking for what the components represent in the typical end-to-end
-workflow but not present in the simplified one, you can refer to
-<a class="reference internal" href="e2e-workflow-adv.html"><span class="doc std std-doc">this section instead</span></a>.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="what-are-the-considerations-internally-by-the-team-and-externally-by-the-shareholders-when-selecting-evaluation-metrics">
+<h1>What are the considerations (internally by the team), and externally (by the shareholders) when selecting evaluation metrics?<a class="headerlink" href="#what-are-the-considerations-internally-by-the-team-and-externally-by-the-shareholders-when-selecting-evaluation-metrics" title="Permalink to this headline">#</a></h1>
+<p>Contributor(s): Er YuYang</p>
+<p>This guide assumes that you have a fair understanding of why the stakeholders is developing the AI/ML project (understand the business value), and have a reasonable understanding for the implementation difficulty of the evaluation for given the dataset.</p>
 </section>
-<section id="data-storage">
-<h2>Data Storage<a class="headerlink" href="#data-storage" title="Permalink to this headline">#</a></h2>
-<p>This pertains to storing the lifeblood of all ML/DL projects, of which
-it is paramount that you know how and where to store data, and that you
-are able to identify raw and processed data. Raw data is defined as
-data that is obtained from primary sources such as temperature sensors,
-while processed data is defined as data that is augmented by
-algorithm(s) or from another ML/DL model.</p>
-<p>It is also important that you know how the product is to be designed,
-such as how data is being fed into the model, or through a
-pre-processing algorithm first. You could ingest the data either
-locally or remotely, and remote options differ between using object
-storage for blob-like data such as image and audio files, database
-storage for text data, of which it may be structured (SQL, etc.) or
-unstructured (NoSQL, JSON, etc.).</p>
-<p>Understanding different types of data storage is important since the
-data that you may be given may not be suitable to be fed into the model
-directly. For example, you might be given a compressed folder of Excel
-sheets, but directly processing them before feeding into the model may
-be suboptimal when you could parallise both processes and possibly
-reducing training time. This may also make resuming work easier since
-there are more checkpoints between the raw data and the model itself.</p>
-<p>You can check <a class="reference internal" href="data-mgmt.html"><span class="doc std std-doc">this section</span></a> for more information on
-data storage options.</p>
-</section>
-<section id="version-control">
-<h2>Version Control<a class="headerlink" href="#version-control" title="Permalink to this headline">#</a></h2>
-<p>Most, if not all, codebases benefit from version control to reduce
-errors by rolling back changes to a known working source. You may
-already have been exposed to it through GitHub or GitLab, which are the
-leading platforms for source code management especially for open source
-projects. Understanding how to use version control effectively would
-make the end-to-end workflow easier.</p>
-<p>For AI practitioners such as ourselves, there is also a subset of
-version control that targets toward datasets, which you may read
-<a class="reference external" href="https://lakefs.io/data-versioning/">this article</a> for more information.</p>
-</section>
-<section id="developer-workspace">
-<h2>Developer Workspace<a class="headerlink" href="#developer-workspace" title="Permalink to this headline">#</a></h2>
-<p>A workspace is the easiest to understand within the workflow, but can
-also be quite complex, especially pertaining to authentication and
-authorisation protocols that your organisation, or client, may have.
-Some reasons may be due to data being sensitive, the machine being
-airgapped, or that the code must be compatible with legacy hardware
-that you cannot interact directly with. Therefore, you may need to
-check with your project objectives and guidelines to see whether you
-may need to deploy a remote developer workspace as part of your project
-infrastructure depending on those protocols.</p>
-</section>
-<section id="model-experimentation">
-<h2>Model Experimentation<a class="headerlink" href="#model-experimentation" title="Permalink to this headline">#</a></h2>
-<p>This is the main part, of which the workflow is designed around on. A
-well-designed workflow would make this process run more smoothly since
-you would not have the need to change the codebase drastically when any
-one of the other components have to change due to external events
-beyond your control.</p>
-</section>
-<section id="model-serving">
-<h2>Model Serving<a class="headerlink" href="#model-serving" title="Permalink to this headline">#</a></h2>
-<p>This may well be the end goal for most, if not all, ML/DL projects.
-Typical tutorials would usually just end it with the model to be served
-locally through script execution, more mature projects would require
-a remote callable API since processes are usually interacted between
-machines rather than only within one machine. These APIs may usually
-use either the REST or gRPC protocol. You would have to decide which
-method is more suitable for your project.</p>
-</section>
-<section id="final-thoughts">
-<h2>Final Thoughts<a class="headerlink" href="#final-thoughts" title="Permalink to this headline">#</a></h2>
-<p>There are many components and processes that can be part of your
-project’s end-to-end workflow, but if you are starting out on the
-development process, this guide has recommended the processes you would
-want to focus on before expanding on other quality-of-life improvements
-that are described in <a class="reference internal" href="e2e-workflow-adv.html"><span class="doc std std-doc">this section instead</span></a>.</p>
-</section>
-<section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<section class="tex2jax_ignore mathjax_ignore" id="high-level-metrics-for-classification-problems">
+<h1>High level metrics (for classification problems)<a class="headerlink" href="#high-level-metrics-for-classification-problems" title="Permalink to this headline">#</a></h1>
+<p>This section covers some of the most common metrics used for evaluating model for classification problems. Do note that this is not exhaustive list but covers the some of common high level metrics that are useful when communicating with stakeholders.</p>
+<ol>
+<li><p>Accuracy = <span class="math notranslate nohighlight">\(\frac{TP + TN}{TP + FP + TN + FN}\)</span></p>
+<p>Simple for explaining to stakeholders but not suitable if the dataset is unbalanced.</p>
+</li>
+<li><p>Precision = <span class="math notranslate nohighlight">\(\frac{TP}{TP+FP}\)</span></p>
+<p>Simplified explaination: Out of the <u>positive predictions</u>, how many are correct. It focuses on finding positive cases.</p>
+</li>
+<li><p>Recall = <span class="math notranslate nohighlight">\(\frac{TP}{TP+FN}\)</span></p>
+<p>Simplified explaination: Out of the <u>actual positive</u>, how many are correct. It focuses on weeding out the negative cases.</p>
+</li>
+<li><p>F1 Score = 2 * <span class="math notranslate nohighlight">\(\frac{Precision * Recall}{Precision + Recall}\)</span></p>
+<p>F1 score is the weighted mean of precision and recall</p>
+</li>
+</ol>
+<p>Precision is more important than recall when you cannot afford to have any FP as compare to FN. Often associate with cost, when cost of acting is high but the cost of not acting is low, then precision is preferred. Recall is more important than precision whe you cannot afford to have any FN as compare to FP. It is more important when the opportunity cost of passing up is high.</p>
+<p>Example: Missing out to detect spam email is okay but missing out of detecting fraud or disease is high (use recall metrics for the latter). Finding as many spam email is desirable than missing out to detect spam email (use precision).</p>
+<p>If both Precision and Recall are equally important than F1 score should be used. There are variation of F1 score:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://lakefs.io/data-versioning/">The Guide to Data Versioning | LakeFS</a></p></li>
+<li><p>micro (globally by counting total positive)</p></li>
+<li><p>macro (calculate f1 for each label then complete <u>unweighted</u> mean)</p></li>
+<li><p>weighted (calculate f1 for each label then complete <u>weighted</u> mean)</p></li>
 </ul>
+<p>Use weighted f1 when data is unbalanced.</p>
+<ol>
+<li><p>Others common metrics</p>
+<p>a. ROC curve (receiver operating characteristic curve)</p>
+<p>b. AUC (Area Under the ROC Curve)</p>
+<p>c. Confusion matrix</p>
+<p>d. Loss functions</p>
+</li>
+</ol>
+<p>Confusion matrix may be required in there is a need to see the exact number of TP, TN, FP, FN, sometimes uses for more technical-inclined stakeholders. Both metrics in 5a &amp; 5b requires predicted labels &amp; predicted probabilities in order to plot curve, avoid using when extracting proabilities is not possible or difficult. For loss functions, there is binary cross-entropy and multi-class entropy for binary/multi-class classification problems. These metrics are often used by internal development team.</p>
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="high-level-metrics-for-regression-problems">
+<h1>High level metrics (for regression problems)<a class="headerlink" href="#high-level-metrics-for-regression-problems" title="Permalink to this headline">#</a></h1>
+<p>This section covers some of the most common metrics used for evaluating model for regression problems.</p>
+<ol>
+<li><p>Mean Square Error (MSE)</p>
+<p>Average of the squared differences between the actual and the predicted values. The lower the value, the better the regression model. It penalizes the outliers most.</p>
+</li>
+<li><p>Root Mean Square Error (RMSE)</p>
+<p>Square root of MSE, used when MSE value is too big for comparsion</p>
+</li>
+<li><p>Mean Absolute Error (MAE)</p>
+<p>Similar to Mean Square Error (MSE) but taking sum of absolute value of error. MSE gives larger penalization to big prediction error as compare to MAE.</p>
+</li>
+</ol>
+<p>MSE, RMSE, MAE are not very useful when comparing against different models when outliers that is presented very extreme.</p>
+<ol>
+<li><p>R2</p>
+<p>One of the popular metrics, express as percentage. Large R2 value indicates a better fit, the closer to 1, the better the regression model. Easier for comparsion against different models as it ranges from 0 to 1.</p>
+</li>
+<li><p>Adjusted R Square</p>
+<p>Similar to R2 but adds precision and reliabilty by considering additional independent variables that tend to skew the results of R-squared measurements</p>
+</li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="in-depth-metrics">
+<h1>In-depth metrics<a class="headerlink" href="#in-depth-metrics" title="Permalink to this headline">#</a></h1>
+<p>This section covers brief introdution of the in-depth metrics used in different AI domain. Do note that this is not exhaustive list.</p>
+<ol>
+<li><p>Evaluation metrics for NER</p>
+<p>Involves classification of phrases in sentence (phrase level classification). Both MUC and SemEval are used together as phrase level classification as NER’s evaluation metrics.</p>
+<ul>
+<li><p>Message Understanding Conference (MUC)</p>
+<p>Used for measuring the prediction class against true label class</p>
+<ul class="simple">
+<li><p>Corrrect (COR): Both prediction and true labels are the same</p></li>
+<li><p>Incorrect (INC): Prediction and true labels do not match</p></li>
+<li><p>Partial (PAR): Some of the text in the prediction matches the true labels</p></li>
+<li><p>Missing (MIS): No prediction from model when there is true labels</p></li>
+<li><p>Spurius (SPU): Wrong prediction when no true labels</p></li>
+</ul>
+</li>
+<li><p>International Workshop on Semantic Evaluation (SemEval)</p>
+<p>Used as different evaluation scheme (strict or lenient) for the length of the words (correctness of the phrase) and classification type (correctness of the phrase classification)</p>
+<ul class="simple">
+<li><p>Strict: Same length of words, correct type</p></li>
+<li><p>Exact: Same length of words, correct/incorrect type</p></li>
+<li><p>Partial: Different length of words, correct/incorrect type</p></li>
+<li><p>Type: Different length of words, correct type</p></li>
+</ul>
+</li>
+</ul>
+<p><img alt="image" src="../../_images/MUC_SemEval.PNG" /></p>
+</li>
+<li><p>Evaluation metrics for Object Detection</p>
+<ul>
+<li><p>Intersection over Union (IOU): evaluates the degree of overlap between the ground truth bounding box with the prediction bounding box</p>
+<p>IoU = <span class="math notranslate nohighlight">\(\frac{Area of overlap}{Area of union}\)</span></p>
+<p><img alt="image" src="../../_images/IoU_comparsion.png" /></p>
+</li>
+<li><p>Average Precision (AP): Area under the precision-recall curve evaluated at IOU threshold. eg. AP50 means IoU above 0.5 is TP while
+AP75 mean IoU above 0.75</p>
+<p><img alt="image" src="../../_images/AP-comparsion.PNG" /></p>
+</li>
+<li><p>Mean Average Precision (mAP): AP is calculated individually for each class, then performed averaging of AP values over all classes</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="reference">
+<h1>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">#</a></h1>
+<p><a class="reference external" href="https://www.davidsbatista.net/blog/2018/05/09/Named_Entity_Evaluation/">https://www.davidsbatista.net/blog/2018/05/09/Named_Entity_Evaluation/</a></p>
+<p><a class="reference external" href="https://towardsdatascience.com/iou-a-better-detection-evaluation-metric-45a511185be1">https://towardsdatascience.com/iou-a-better-detection-evaluation-metric-45a511185be1</a></p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -779,7 +714,7 @@ that are described in <a class="reference internal" href="e2e-workflow-adv.html"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./book/5-data-mgmt-exp-proc"
+            path: "./book/6-modelling"
         },
         predefinedOutput: true
     }
@@ -793,20 +728,6 @@ that are described in <a class="reference internal" href="e2e-workflow-adv.html"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="data-splits-bias-fairness-leakage.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Potential scenarios of bias, unfairness, data leakage in data splits and suggestions to remedy</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="e2e-workflow-adv.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">How do I Enhance the Workflow with Quality-of-Life Improvements for My End-to-End Workflow?</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
