@@ -230,36 +230,19 @@ const thebe_selector_output = ".output, .cell_output"
      How do I Enhance the Workflow with Quality-of-Life Improvements for My End-to-End Workflow?
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="data-poisoning-data-extraction.html">
-     What to look out for in my data sources to reduce the risks of data poisoning and data extraction?
-    </a>
-   </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../6-modelling/overview.html">
    6. Modelling
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../6-modelling/eval-metrics.html">
-     What are the considerations (internally by the team), and externally (by the shareholders) when selecting evaluation metrics?
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../7-solution-delivery/overview.html">
    7. Solution Delivery
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -280,8 +263,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../8-documentation-handover/overview.html">
    8. Documentation &amp; Handover
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -297,8 +280,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../_contributing.html">
    How To Contribute
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -578,7 +561,7 @@ title="Print to PDF"
 <li><p>ii) The splitting of the full dataset into train, validation and test sets introduces skewness (eg. the train set contains 30% aged above 60 while the validation set contains 15% aged above 60).</p></li>
 </ul>
 <p>This article discusses point ii).</p>
-<p><em>Point i) is related to ensuring a representative dataset is curated at the start of the project, and this is partly discussed in <a class="reference internal" href="../1-pre-project-phase/key_areas_in_data.html"><span class="doc std std-doc">What are the key areas to look out for in the data when framing the AI project?</span></a>.</em></p>
+<p><em>Point i) is pertains to curating a representative dataset at the start of the project. This is partly discussed in the section <a class="reference internal" href="../1-pre-project-phase/key_areas_in_data.html"><span class="doc std std-doc">What are the key areas to look out for in the data when framing the AI project?</span></a>.</em></p>
 <p>Certain problems are inherently imbalanced. For example, fraud detection datasets usually have fewer fraudulent examples than normal examples. In such a scenario, you should favour a stratified data split over a random split to ensure that there are equal proportions of fraudulent to normal examples in each data split. You will want to avoid a situation where your train set is predominantly normal, and your development set has a higher proportion of fraudulent data than in reality.</p>
 <p>When dealing with datasets involving geographical and demographical slices, you may also want to consider stratified data split to ensure that each split contains a balanced set of examples across geographical and demographical attributes. This will help reduce any potential unfairness in model predictions between users from different geographical and demographical slices.</p>
 </section>
