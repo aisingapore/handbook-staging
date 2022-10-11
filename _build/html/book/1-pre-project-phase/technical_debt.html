@@ -230,36 +230,19 @@ const thebe_selector_output = ".output, .cell_output"
      How do I Enhance the Workflow with Quality-of-Life Improvements for My End-to-End Workflow?
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../5-data-mgmt-exp-proc/data-poisoning-data-extraction.html">
-     What to look out for in my data sources to reduce the risks of data poisoning and data extraction?
-    </a>
-   </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../6-modelling/overview.html">
    6. Modelling
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../6-modelling/eval-metrics.html">
-     What are the considerations (internally by the team), and externally (by the shareholders) when selecting evaluation metrics?
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../7-solution-delivery/overview.html">
    7. Solution Delivery
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -280,8 +263,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../8-documentation-handover/overview.html">
    8. Documentation &amp; Handover
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -297,8 +280,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../_contributing.html">
    How To Contribute
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -516,6 +499,18 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#deliberate-and-prudent-technical-debt">
    Deliberate and prudent technical debt
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deliberate-vs-inadvertent">
+     Deliberate vs inadvertent
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prudent-vs-reckless">
+     Prudent vs reckless
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#technical-debt-in-machine-learning">
@@ -565,6 +560,18 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#deliberate-and-prudent-technical-debt">
    Deliberate and prudent technical debt
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deliberate-vs-inadvertent">
+     Deliberate vs inadvertent
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prudent-vs-reckless">
+     Prudent vs reckless
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#technical-debt-in-machine-learning">
@@ -598,10 +605,10 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="what-are-the-factors-considerations-criteria-to-consider-that-will-reduce-potential-technical-debt">
 <h1>What are the factors/considerations/criteria to consider that will reduce potential technical debt?<a class="headerlink" href="#what-are-the-factors-considerations-criteria-to-consider-that-will-reduce-potential-technical-debt" title="Permalink to this headline">#</a></h1>
-<p>Contributor(s): Dylan Poh Guan Kiong</p>
+<p>Contributor(s): Dylan Poh Guan Kiong, AI Engineer <a class="reference external" href="https://unicorndy.github.io/Dylan_Poh/">(GitHub)</a></p>
 <section id="what-is-technical-debt">
 <h2>What is technical debt?<a class="headerlink" href="#what-is-technical-debt" title="Permalink to this headline">#</a></h2>
-<p>In software development, technical debt is the accumulation of continuous expenses and it occurs when software engineers prioritize speed of deployment over all other development factors. Fast builds can cause problems that can be very difficult to resolve in the future.</p>
+<p>In software development, technical debt is the accumulation of continuous expenses. It occurs when software engineers prioritise speed of deployment over all other development factors. Fast builds can cause problems that can be very difficult to resolve in the future.</p>
 <p>Similar to financial debt, technical debt that is not repaid can accrue “interest,” which makes it more expensive to make modifications in future. However, it might not always be a bad thing as developers might intentionally cut corners to produce a proof of concept to advance initiatives.</p>
 <p>Martin Fowler offers a more detailed analyses of technical debt quadrant:</p>
 <table class="colwidths-auto table">
@@ -617,11 +624,16 @@ title="Print to PDF"
 </section>
 <section id="deliberate-and-prudent-technical-debt">
 <h2>Deliberate and prudent technical debt<a class="headerlink" href="#deliberate-and-prudent-technical-debt" title="Permalink to this headline">#</a></h2>
-<p>Deliberate vs inadvertent:
-AI engineers may deliberately choose to cut corners, knowing that it would cost them in the long run. For instance, the developer may choose to build and deploy a model without investing in a framework or pipeline, choosing quick release over maintainability. In other words, they consciously trade off now gains for future expenses.
-Junior AI engineers might not fully appreciate the benefit of using version control system and inadvertently decide to develop without the relevant tools. Only finding it impossible to roll back the code when the pipelines are broken.</p>
-<p>Prudent vs reckless:
-Some engineering choices, like rapidly prototyping a large number of models to choose the best algorithm, hence overlooking a maintainable pipeline could be a prudent decision since they are aware that they are incurring debt and consider the pros and drawbacks of using the best algorithm versus paying it off sooner. However, knowing sound software development principles but writing spaghetti code because of a tight schedule could result in reckless debt.</p>
+<section id="deliberate-vs-inadvertent">
+<h3>Deliberate vs inadvertent<a class="headerlink" href="#deliberate-vs-inadvertent" title="Permalink to this headline">#</a></h3>
+<p>AI engineers may deliberately choose to cut corners, knowing that it would cost them in the long run. For instance, the developer may choose to build and deploy a model without investing in a framework or pipeline, choosing quick release over maintainability. In other words, they consciously trade short-term gains for future expenses.</p>
+<p>Junior AI engineers might not fully appreciate the benefit of using version control system and inadvertently decide to develop without the relevant tools. They may later find it impossible to roll back the code when the pipelines are broken.</p>
+</section>
+<section id="prudent-vs-reckless">
+<h3>Prudent vs reckless<a class="headerlink" href="#prudent-vs-reckless" title="Permalink to this headline">#</a></h3>
+<p>Some engineering choices, like rapidly prototyping a large number of models to choose the best algorithm, hence overlooking a maintainable pipeline could be a prudent decision since they are aware that they are incurring debt and consider the pros and drawbacks of using the best algorithm versus paying it off sooner.</p>
+<p>However, knowing sound software development principles but writing spaghetti code because of a tight schedule could result in reckless debt.</p>
+</section>
 </section>
 <section id="technical-debt-in-machine-learning">
 <h2>Technical Debt in Machine Learning<a class="headerlink" href="#technical-debt-in-machine-learning" title="Permalink to this headline">#</a></h2>
@@ -639,7 +651,7 @@ Some engineering choices, like rapidly prototyping a large number of models to c
 </section>
 <section id="the-25-best-practices">
 <h2>The 25 Best Practices<a class="headerlink" href="#the-25-best-practices" title="Permalink to this headline">#</a></h2>
-<p>Given that technical debt has already been the subject of extensive research in this <a class="reference external" href="https://proceedings.neurips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf">publication</a>; as a result, a list of best practices as recommended by <a class="reference external" href="https://matthewmcateer.me/blog/machine-learning-technical-debt/">Matthew McAteer</a> are listed here.</p>
+<p>Technical debt has already been the subject of <a class="reference external" href="https://proceedings.neurips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf">extensive research</a>. A list of best practices as recommended by <a class="reference external" href="https://matthewmcateer.me/blog/machine-learning-technical-debt/">Matthew McAteer</a> is provided here:</p>
 <ul class="simple">
 <li><p>Use interpretability tools like SHAP values</p></li>
 <li><p>Use explainable model types if possible</p></li>
@@ -651,11 +663,11 @@ Some engineering choices, like rapidly prototyping a large number of models to c
 <li><p>Check independence assumptions behind models (and work closely with security engineers.</p></li>
 <li><p>Use regular code-reviews (and/or use automatic code-sniffing tools).</p></li>
 <li><p>Repackage general-purpose dependencies into specific APIs.</p></li>
-<li><p>Get rid of Pipeline jungles with top-down redesign/reimplementation.</p></li>
+<li><p>Get rid of pipeline jungles with top-down redesign/reimplementation.</p></li>
 <li><p>Set regular checks and criteria for removing code, or put the code in a directory or on a disk far-removed from the business-critical stuff.</p></li>
 <li><p>Stay up-to-date on abstractions that are becoming more solidified with time</p></li>
 <li><p>Use packages like Typing and Decimal, and don’t use ‘float32’ for all data objects</p></li>
-<li><p>Don’t leave all works-in-progress in the same directory. Clean it up or toss it out.</p></li>
+<li><p>Do not leave all works-in-progress in the same directory. Clean it up or toss it out.</p></li>
 <li><p>Make sure endpoints are accounted, and use frameworks that have similar abstractions between languages</p></li>
 <li><p>Make it so you can set your file paths, hyperparameters, layer type and layer order, and other settings from one location</p></li>
 <li><p>Monitor the models’ real-world performance and decision boundaries constantly</p></li>
@@ -670,7 +682,7 @@ Some engineering choices, like rapidly prototyping a large number of models to c
 </section>
 <section id="measuring-technical-debt">
 <h2>Measuring technical debt<a class="headerlink" href="#measuring-technical-debt" title="Permalink to this headline">#</a></h2>
-<p>Before delving into specifics, this <a class="reference external" href="https://proceedings.neurips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf">article</a> included a list of pertinent questions to consider, allowing the reader to get a general idea of the amount of technical debt present in a system.</p>
+<p>Before delving into specifics, this <a class="reference external" href="https://proceedings.neurips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf">article</a> includes a list of pertinent questions to consider, allowing the reader to get a general idea of the amount of technical debt present in a system:</p>
 <ul class="simple">
 <li><p>How easily can an entirely new algorithmic approach be tested at full scale?</p></li>
 <li><p>What is the transitive closure of all data dependencies?</p></li>
