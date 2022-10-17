@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>What are the basic core structure for performing EDA and optional blocks for specific AI domain or specific use case? &#8212; AI Practitioner Handbook</title>
+    <title>What are the basic core structure for performing EDA? &#8212; AI Practitioner Handbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -212,7 +212,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     What are the basic core structure for performing EDA and optional blocks for specific AI domain or specific use case?
+     What are the basic core structure for performing EDA?
     </a>
    </li>
    <li class="toctree-l2">
@@ -524,7 +524,7 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   What are the basic core structure for performing EDA and optional blocks for specific AI domain or specific use case?
+   What are the basic core structure for performing EDA?
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -561,7 +561,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>What are the basic core structure for performing EDA and optional blocks for specific AI domain or specific use case?</h1>
+                <h1>What are the basic core structure for performing EDA?</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -573,7 +573,7 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   What are the basic core structure for performing EDA and optional blocks for specific AI domain or specific use case?
+   What are the basic core structure for performing EDA?
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -611,31 +611,31 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="what-are-the-basic-core-structure-for-performing-eda-and-optional-blocks-for-specific-ai-domain-or-specific-use-case">
-<h1>What are the basic core structure for performing EDA and optional blocks for specific AI domain or specific use case?<a class="headerlink" href="#what-are-the-basic-core-structure-for-performing-eda-and-optional-blocks-for-specific-ai-domain-or-specific-use-case" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="what-are-the-basic-core-structure-for-performing-eda">
+<h1>What are the basic core structure for performing EDA?<a class="headerlink" href="#what-are-the-basic-core-structure-for-performing-eda" title="Permalink to this headline">#</a></h1>
 <p>Contributor: Er YuYang</p>
-<p>The purpose of this guide is to have a more systematic approach for performing EDA and some guideline or tips when performing EDA. The guide is design for a generic EDA purpose, and sections should be applied when it is applicable.</p>
+<p>The purpose of this guide is to have a more systematic approach for performing EDA and some guideline or tips when performing EDA. The guide is designed for a generic EDA purpose and primarly focus on tabular data, however do note that certain parts of the workflow is still applicable for unstructured data types.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="overview">
 <h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h1>
 <p>The organization for most EDA should contain these blocks in the notebook</p>
 <ol>
 <li><p>Structure investigation</p>
-<p>This section should cover the understanding the size of the data and data type. Also, examining if the data contains non-PDPA compliance data or other sensitive data.</p>
+<p>This section should investigate the data size and type. It should also examine if the data contains any private data or sensitive data.</p>
 </li>
 <li><p>Quality investigation</p>
 <p>This section should cover the quality of the data such as duplicate, missing and erroneous values hence identifying the potential data to drop, repair or impute.</p>
 </li>
 <li><p>Content investigation</p>
-<p>This section should cover the more in-depth analysis such as the relationship for the features. The main aim is to find if there are any trends or patterns in the data.</p>
+<p>This section should cover the more in-depth analyses such as relationship between features. The main aim is to find if there are any trends or patterns in the data.</p>
 </li>
 </ol>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="structure-investigation">
 <h1>Structure investigation<a class="headerlink" href="#structure-investigation" title="Permalink to this headline">#</a></h1>
 <p>General guideline:</p>
-<p>This section should be short (about less than 5 cells), it only aims the gain some insight of the size and datatype of the data.</p>
-<p>Sample python command (for reference):</p>
+<p>This section should be short (about less than 5 cells), it only aims to gain some insights on the size and datatype of the data.</p>
+<p>Sample Python command (for reference):</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>a) df.shape
 b) df.info() or df.dtypes or pd.value_counts(df.dtypes)
 c) df.describe()
@@ -647,34 +647,52 @@ d) df.head() or df.tail()
 <li><p>raw version of data</p></li>
 <li><p>gain some insight of the size and datatype of the data</p></li>
 </ul>
-<p>Tips for large data:</p>
+<p>a.) Tips for large data:</p>
 <p>In the scenario if the data is too huge, explore using reading by sampling or chunking. Parallel processing like Dask or Ray can also help. For saving big data to disk, other file format (like Pickle, Feather, Parquest and HDF5) can help to compress to reduce the storage size.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="quality-investigation">
 <h1>Quality investigation<a class="headerlink" href="#quality-investigation" title="Permalink to this headline">#</a></h1>
 <p>General guideline:</p>
-<p>This section should cover mostly on data cleaning, imputing and feature engineering/feature importance. In the scenario if there are too few features in the data, feature engineering should be explored. Vice versa if there are too many features, feature importance should be explored and then dropping less important features. If there are too many missing values consider dropping the column. However if dropping is not an option, a complex method for imputing the missing value is to use the other avaiable features to predict the value of that particular column.</p>
+<p>This section should cover mostly on data cleaning, imputing and feature engineering/feature importance. In the scenario if there are too few features in the data, feature engineering should be explored. Conversely if there are too many features, feature importance should be explored and then dropping less important features. If there are too many missing values consider dropping the column. However if dropping is not an option, a more sophisticated method for imputing the missing value is to use the other avaiable features to predict the value of that particular column.</p>
 <p>Expected ouput:</p>
 <ul class="simple">
 <li><p>cleaned version of data ready for plotting charts</p></li>
 </ul>
-<p>Tips on handling missing values (common techniques):</p>
+<p>a.) Tips on handling missing values:</p>
+<p>Non-ML techniques</p>
 <ul class="simple">
+<li><p>try to obtain the missing data from source</p></li>
+<li><p>try to estimate the missing data from the other data (based on similarity)</p></li>
 <li><p>do nothing (let the model handle it)</p></li>
+</ul>
+<p>ML techniques</p>
+<ul class="simple">
 <li><p>impute using mean or median</p></li>
 <li><p>impute using most frequent or constant (eg. zero) values</p></li>
 <li><p>use machine learning model to impute</p></li>
 </ul>
-<p>Tips on cleaning categorial features:</p>
-<p>Perform a unique check to see if there are similar category but is categorised differently due to spelling mistake. Determine if the categorial features should be later mapped as ordinal or nominal.</p>
-<p>Sample python command (for reference):</p>
+<p>The choice of approach for handling missing data is also influence by the type of “missingness”. There are three kinds of missing data.</p>
+<ul>
+<li><p>missing completely at random (MCAR)</p>
+<p>There is no relationship between the missingness of the data and any values observed or missing. There is nothing systemic going on that makes some data more likely to be missing than others.</p>
+</li>
+<li><p>missing at random (MAR)</p>
+<p>An observation is missing has nothing to do with the missing values, but it does have to do with the values of the an individual’s observed variable(s). Eg. Men are more likely to tell you their weight than women, hence weight feature is considered as MAR.</p>
+</li>
+<li><p>missing not at random (MNAR)</p>
+<p>There is relationship between the inclination or natural tendency of the value to be missing and its values. Eg. Individual with the lowest eduation may have their missing value on the education feature.</p>
+</li>
+</ul>
+<p>b.) Tips on cleaning categorial features:</p>
+<p>Perform a check for unique values to see if there are similar category due to spelling mistake or variations. Determine if the categorial features should be later mapped as ordinal or nominal.</p>
+<p>Sample Python command (for reference):</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>a) df.nunique()
 b) for column_name in df.columns:    
     print(df[column_name].unique())
 </pre></div>
 </div>
-<p>Tips on currency features:</p>
-<p>If multiple currencies are involved as a feature, make sure to convert them into the same currency, otherwise the scale of the different currency will confused the model or EDA findings.</p>
+<p>c.) Tips on currency features:</p>
+<p>If multiple currencies are involved as a feature, make sure to convert them into the same currency, otherwise the scale of the different currency will confuse the model or EDA findings.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="content-investigation">
 <h1>Content investigation<a class="headerlink" href="#content-investigation" title="Permalink to this headline">#</a></h1>
@@ -682,31 +700,42 @@ b) for column_name in df.columns:
 <p>The analysis should cover the following</p>
 <ul class="simple">
 <li><p>distribution of the features</p></li>
-<li><p>features patterns (trend)</p></li>
-<li><p>features relationship (correlation)</p></li>
+<li><p>feature patterns (trend)</p></li>
+<li><p>feature relationships (correlation)</p></li>
 </ul>
-<p>If there are district groups of data in the data, try grouping these data and performed individual analysis for each group, in additional to these entire data analysis. Try to use looping to cover the entire possible combinations when plotting charts that compare two features instead of selecting particular features combination that you preceive is useful. Investigate further if certain combination of features have interesting results. Highlight the findings (whether there are useful finding or not) on the notebook as well, this allows the reader to understand the purpose of the charts.</p>
+<p>If there are district groups in the data, try grouping them and perform individual analysis for each group, in additional to the entire data analysis. Try to use looping to cover the entire possible combinations when plotting charts that compare two features instead of selecting particular features combination that you preceive is useful. Investigate further if certain combination of features have interesting results. Highlight the findings on the notebook, regardless of whether they are useful or not, this allows the reader to understand the purpose of the charts.</p>
 <p>Expected ouput:</p>
 <ul class="simple">
 <li><p>Conclusion of the findings of EDA investigation</p></li>
 </ul>
-<p>Tips on the type of plot to use:</p>
+<p>a.) Tips on the type of plot to use:</p>
 <ul class="simple">
-<li><p>histogram chart (great for viewing distribution of features, and comparing btw different group of data)</p></li>
+<li><p>histogram chart (great for viewing distribution of features, and comparing between different group of data)</p></li>
 <li><p>stacked chart (avoid using if possible)</p></li>
 <li><p>line chart (commonly use in time-series data, mainly use to observed trend)</p></li>
 <li><p>pie chart (not recommended, use only if need to compare the size of each feature)</p></li>
 <li><p>box plot (useful for identify 25%-50%-75% mark only if the outlier is not extreme)</p></li>
 <li><p>scatter plot (useful for examining up to 3 features together, hue as the 3rd feature)</p></li>
-<li><p>tsne plot (useful for examining features above 3 and more)</p></li>
-<li><p>coorelation plot (useful if unsure which features to examine)</p></li>
+<li><p>t-SNE plot (useful for examining features above 3 and more)</p></li>
+<li><p>numerical correlation plot (useful if unsure which features to examine)</p>
+<ul>
+<li><p>spearman’s correlation</p></li>
+<li><p>pearson’s correlation</p></li>
+</ul>
+</li>
+<li><p>categorical correlation plot (no negative correlation due the categorical features)</p>
+<ul>
+<li><p>phik’s correlation matrix</p></li>
+</ul>
+</li>
 </ul>
 <p>Side note:
-tsne and coorelation plot often time consuming when generating chart.</p>
+t-SNE and correlation plots are often time-consuming when generating chart.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="references">
 <h1>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h1>
-<p><a class="reference external" href="https://miykael.github.io/blog/2022/advanced_eda/">https://miykael.github.io/blog/2022/advanced_eda/</a></p>
+<p><a class="reference external" href="https://miykael.github.io/blog/2022/advanced_eda/">https://miykael.github.io/blog/2022/advanced_eda/</a>
+<a class="reference external" href="https://www-users.york.ac.uk/~mb55/intro/typemiss4.htm">https://www-users.york.ac.uk/~mb55/intro/typemiss4.htm</a></p>
 </section>
 
     <script type="text/x-thebe-config">
