@@ -538,19 +538,48 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#quality-investigation">
-   Quality investigation
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#content-investigation">
    Content investigation
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-quality-checks">
+     2a) Quality checks
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-distribution-checks">
+     2b) Distribution checks
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-relationship-checks">
+     2c) Relationship checks
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#others">
+   Others
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
    References
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#article-link">
+     Article link
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#video-link">
+     Video link
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -587,19 +616,48 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#quality-investigation">
-   Quality investigation
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#content-investigation">
    Content investigation
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-quality-checks">
+     2a) Quality checks
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-distribution-checks">
+     2b) Distribution checks
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-relationship-checks">
+     2c) Relationship checks
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#others">
+   Others
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
    References
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#article-link">
+     Article link
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#video-link">
+     Video link
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -614,128 +672,291 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="what-are-the-basic-core-structure-for-performing-eda">
 <h1>What are the basic core structure for performing EDA?<a class="headerlink" href="#what-are-the-basic-core-structure-for-performing-eda" title="Permalink to this headline">#</a></h1>
 <p>Contributor: Er YuYang</p>
-<p>The purpose of this guide is to have a more systematic approach for performing EDA and some guideline or tips when performing EDA. The guide is designed for a generic EDA purpose and primarly focus on tabular data, however do note that certain parts of the workflow is still applicable for unstructured data types.</p>
+<p>The purpose of this guide is to have a more systematic approach and guideline or tips when performing EDA. The guide is designed for a generic EDA purpose and primarly focus on tabular data, however do note that certain parts of the workflow is still applicable for unstructured data types.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="overview">
 <h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h1>
 <p>The organization for most EDA should contain these blocks in the notebook</p>
 <ol>
 <li><p>Structure investigation</p>
-<p>This section should investigate the data size and type. It should also examine if the data contains any private data or sensitive data.</p>
-</li>
-<li><p>Quality investigation</p>
-<p>This section should cover the quality of the data such as duplicate, missing and erroneous values hence identifying the potential data to drop, repair or impute.</p>
+<p>This section should contains the most basic checks on the overall completeness and level of information of the dataset. These includes the checking the data size and type as well as granularity/cardinality of each table. It should also examine if the data contains any private or sensitive data.</p>
 </li>
 <li><p>Content investigation</p>
-<p>This section should cover the more in-depth analyses such as relationship between features. The main aim is to find if there are any trends or patterns in the data.</p>
+<p>This section look into the quality, distribution and relationships in the dataset, and need not be in this particular order.</p>
+<p>2a) Quality checks</p>
+<p>This sub-section should cover the quality of the data such as missing and erroneous values. The main aim is to identify the potential data to drop, repair or impute.</p>
+<p>2b) Distribution checks</p>
+<p>This sub-section should cover the understanding of each individual features. The main aim is to find out the chararterics of the features and also if there are any trends or patterns in the data.</p>
+<p>2c) Relationship checks</p>
+<p>This sub-section should cover the more in-depth analyses such as relationship between feature vs feature and features vs target. The main aim is to generate ideas for feature engineering and selection based on the relationship.</p>
 </li>
 </ol>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="structure-investigation">
 <h1>Structure investigation<a class="headerlink" href="#structure-investigation" title="Permalink to this headline">#</a></h1>
 <p>General guideline:</p>
-<p>This section should be short (about less than 5 cells), it only aims to gain some insights on the size and datatype of the data.</p>
+<p>This section should be short (about less than 10 cells), it only aims to gain some insights on the size and datatype of the data and do not go into the content of each variable/feature.</p>
+<p>When checking the datatype, organise the features according to whether they are numeric/continuous, or categorical, this will helps to decide on suitable visualisations when performing content investigation later.</p>
+<p>When dealing with private or sensitive data, discuss with stakeholder whether masking or removing them is a better option. When duplicate rows are present, highlight those and discuss with stakeholder on how to deal duplicate rows as these rows will introduce data leakage when performing data split for model training/evaluation.</p>
 <p>Sample Python command (for reference):</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>a) df.shape
-b) df.info() or df.dtypes or pd.value_counts(df.dtypes)
-c) df.describe()
-d) df.head() or df.tail()
+b) df.info() or df.dtypes or pd.value_counts(df.dtypes)    
+c) df.head() or df.tail()
+d) sum(df.duplicated())
+e) df.nunique()
 </pre></div>
 </div>
 <p>Expected ouput:</p>
 <ul class="simple">
-<li><p>raw version of data</p></li>
-<li><p>gain some insight of the size and datatype of the data</p></li>
+<li><p>raw version of data loaded in the notebook</p></li>
+<li><p>size of data, whether parallel processing is needed</p></li>
+<li><p>datatype of features, which features are numeric/continuous, or categorical</p></li>
+<li><p>(optional) further discussion with stakeholder on handling private/sensitive data and duplicate rows</p></li>
 </ul>
 <p>a.) Tips for large data:</p>
 <p>In the scenario if the data is too huge, explore using reading by sampling or chunking. Parallel processing like Dask or Ray can also help. For saving big data to disk, other file format (like Pickle, Feather, Parquest and HDF5) can help to compress to reduce the storage size.</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="quality-investigation">
-<h1>Quality investigation<a class="headerlink" href="#quality-investigation" title="Permalink to this headline">#</a></h1>
-<p>General guideline:</p>
-<p>This section should cover mostly on data cleaning, imputing and feature engineering/feature importance. In the scenario if there are too few features in the data, feature engineering should be explored. Conversely if there are too many features, feature importance should be explored and then dropping less important features. If there are too many missing values consider dropping the column. However if dropping is not an option, a more sophisticated method for imputing the missing value is to use the other avaiable features to predict the value of that particular column.</p>
-<p>Expected ouput:</p>
+<p>b.) Tips for performing granularity checks</p>
+<p>Purpose is to understand how fine or coarse each row and column is and verify whether the table is of the correct granularity per the database schema. These are some checklist questions for granularity checks</p>
 <ul class="simple">
-<li><p>cleaned version of data ready for plotting charts</p></li>
-</ul>
-<p>a.) Tips on handling missing values:</p>
-<p>Non-ML techniques</p>
-<ul class="simple">
-<li><p>try to obtain the missing data from source</p></li>
-<li><p>try to estimate the missing data from the other data (based on similarity)</p></li>
-<li><p>do nothing (let the model handle it)</p></li>
-</ul>
-<p>ML techniques</p>
-<ul class="simple">
-<li><p>impute using mean or median</p></li>
-<li><p>impute using most frequent or constant (eg. zero) values</p></li>
-<li><p>use machine learning model to impute</p></li>
-</ul>
-<p>The choice of approach for handling missing data is also influence by the type of “missingness”. There are three kinds of missing data.</p>
+<li><p>What does a record represent?</p>
 <ul>
-<li><p>missing completely at random (MCAR)</p>
-<p>There is no relationship between the missingness of the data and any values observed or missing. There is nothing systemic going on that makes some data more likely to be missing than others.</p>
-</li>
-<li><p>missing at random (MAR)</p>
-<p>An observation is missing has nothing to do with the missing values, but it does have to do with the values of the an individual’s observed variable(s). Eg. Men are more likely to tell you their weight than women, hence weight feature is considered as MAR.</p>
-</li>
-<li><p>missing not at random (MNAR)</p>
-<p>There is relationship between the inclination or natural tendency of the value to be missing and its values. Eg. Individual with the lowest eduation may have their missing value on the education feature.</p>
-</li>
+<li><p>Is it wide format? (repeated responses will be in a single row, and each response is in a separate column)
+<img src="../assets/images/screenshots/wide_format.PNG" width="500" height="120" /></p></li>
+<li><p>Is it long/stacked format? (each row is one time point per subject)
+<img src="../assets/images/screenshots/long_format.PNG" width="400" height="300" /></p></li>
 </ul>
-<p>b.) Tips on cleaning categorial features:</p>
-<p>Perform a check for unique values to see if there are similar category due to spelling mistake or variations. Determine if the categorial features should be later mapped as ordinal or nominal.</p>
-<p>Sample Python command (for reference):</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>a) df.nunique()
-b) for column_name in df.columns:    
-    print(df[column_name].unique())
-</pre></div>
-</div>
-<p>c.) Tips on currency features:</p>
-<p>If multiple currencies are involved as a feature, make sure to convert them into the same currency, otherwise the scale of the different currency will confuse the model or EDA findings.</p>
+</li>
+<li><p>Do all records capture granularity at the same level?</p></li>
+<li><p>If the data were aggregated, how was the aggregation performed?</p></li>
+<li><p>What kinds of aggregations can we perform on the data?</p></li>
+</ul>
+<p>c.) Tips for performing cardinality checks</p>
+<p>Purpose is to find out how many distinct value in each features. Considered dropping high cardinality feature(s) that have almost equal or close to number of rows in the dataset. For example, unique id and remarks which is not useful for EDA as there are no trend in these feature(s).</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="content-investigation">
 <h1>Content investigation<a class="headerlink" href="#content-investigation" title="Permalink to this headline">#</a></h1>
+<section id="a-quality-checks">
+<h2>2a) Quality checks<a class="headerlink" href="#a-quality-checks" title="Permalink to this headline">#</a></h2>
 <p>General guideline:</p>
-<p>The analysis should cover the following</p>
-<ul class="simple">
-<li><p>distribution of the features</p></li>
-<li><p>feature patterns (trend)</p></li>
-<li><p>feature relationships (correlation)</p></li>
-</ul>
-<p>If there are district groups in the data, try grouping them and perform individual analysis for each group, in additional to the entire data analysis. Try to use looping to cover the entire possible combinations when plotting charts that compare two features instead of selecting particular features combination that you preceive is useful. Investigate further if certain combination of features have interesting results. Highlight the findings on the notebook, regardless of whether they are useful or not, this allows the reader to understand the purpose of the charts.</p>
+<p>This sub-section should cover mostly on data cleaning and imputing. If there are too many missing values consider dropping the column. However if dropping is not an option, a more sophisticated method for imputing the missing value is to use the other avaiable features to predict the value of that particular column.</p>
 <p>Expected ouput:</p>
 <ul class="simple">
-<li><p>Conclusion of the findings of EDA investigation</p></li>
+<li><p>cleaned version of data ready for plotting charts</p></li>
+<li><p>identify data/column(s) that requires preprocessing in the datapipeline</p></li>
 </ul>
-<p>a.) Tips on the type of plot to use:</p>
+<p>a.) Tips on missing data</p>
+<p>The choice of approach for handling missing data is also influence by the type of “missingness”. Before performing any imputation, it is highly recommended to first consult the stakeholder and understand possible reasons behind the missingness. There are three kinds of missing data.</p>
+<ul>
+<li><p>Missing completely at random (MCAR)</p>
+<p>There is no relationship between the missingness of the data and any values observed or missing. There is nothing systemic going on that makes some data more likely to be missing than others.</p>
+</li>
+<li><p>Missing at random (MAR)</p>
+<p>An observation is missing has nothing to do with the missing values, but it does have to do with the values of the an individual’s observed variable(s). For instance, men are more likely to tell you their weight than women, hence weight feature is considered as MAR.</p>
+</li>
+<li><p>Missing not at random (MNAR)</p>
+<p>There is relationship between the inclination or natural tendency of the value to be missing and its values. For example, individual with the lowest eduation may have their missing value on the education feature.</p>
+</li>
+</ul>
+<p>Generally, there are 4 ways to impute</p>
+<ul>
+<li><p>Assign a fixed value(s) based on domain knowledge</p>
+<p>Try to obtain the missing data from stakeholder or relevant subject matter expert (SME). For instance, stakeholder might said that the data is for a certain health campaign was for breast cancer screening, hence missing Gender can be imputed as Female.</p>
+</li>
+<li><p>Simple imputation based on statistical summaries</p>
+<p>For numerical features, impute using mean or median of that feature. For categorical features, impute using mode (most frequent) of that feature.</p>
+</li>
+<li><p>Model-based imputation</p>
+<p>Using other available features as predictors (eg. MissForest: see article link at reference section)</p>
+</li>
+<li><p>Multiple imputation</p>
+<p>Most sophisticated imputation method, more time consuming but has unbiased outcome. It takes random samples for each imputation, and take the average of the predictions from each imputation. (see video link at reference section)</p>
+</li>
+</ul>
+<p>b.) Tips on cleaning categorial features:</p>
+<p>Perform cardinality check on categorical features as there could be similar category due to spelling mistake or variations. Cleaning these erroneous category will help to reduce unnecessary noise in the analysis. It also helps to assess whether some categories are too sparse and may need to be merged for greater statistical power.</p>
+<p>At the same time, determine if the categorial features should be later mapped as ordinal or nominal. Converting categorial into numerical helps to include these catagerial features in the pairwise coorelation algothrim.</p>
+<p>Sample Python command (for reference):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>categorical_columns = [&#39;&lt;column1&gt;&#39;, &#39;&lt;column2&gt;&#39;, ..., &#39;&lt;columnN&gt;&#39;]
+for column_name in categorical_columns:
+  print(df[column_name].unique())
+</pre></div>
+</div>
+<p>c.) Tips on cleaning multiple currency type in same column:</p>
+<p>If multiple currencies are involved as single feature, make sure to convert them into the same currency in the same column, otherwise the scale of the different currency will confuse the model when training or EDA findings.</p>
+</section>
+<section id="b-distribution-checks">
+<h2>2b) Distribution checks<a class="headerlink" href="#b-distribution-checks" title="Permalink to this headline">#</a></h2>
+<p>General guideline:</p>
+<p>This sub-section should cover generating the distribution and summary statistics. Understanding variable properties like central trends (mean), spread (variance) and skewness help you to spot erroneous values and potential outliers easily.</p>
+<p>If there are district groups in the data, try grouping them and perform individual analysis for each group, in additional to the entire data analysis. Try to use looping to cover the entire possible combinations when plotting charts that compare two features instead of selecting particular features combination that you preceive is useful. Investigate further if certain combination of features have interesting results.</p>
+<p>Highlight the findings on the notebook, regardless of whether they are useful or not, this allows the reader to understand the purpose of the charts.</p>
+<p>The analysis should cover the following</p>
 <ul class="simple">
-<li><p>histogram chart (great for viewing distribution of features, and comparing between different group of data)</p></li>
-<li><p>stacked chart (avoid using if possible)</p></li>
-<li><p>line chart (commonly use in time-series data, mainly use to observed trend)</p></li>
-<li><p>pie chart (not recommended, use only if need to compare the size of each feature)</p></li>
-<li><p>box plot (useful for identify 25%-50%-75% mark only if the outlier is not extreme)</p></li>
-<li><p>scatter plot (useful for examining up to 3 features together, hue as the 3rd feature)</p></li>
-<li><p>t-SNE plot (useful for examining features above 3 and more)</p></li>
-<li><p>numerical correlation plot (useful if unsure which features to examine)</p>
+<li><p>summary statistics of the features</p></li>
+<li><p>distribution of the features</p></li>
+<li><p>feature patterns (trend)</p></li>
+</ul>
+<p>Expected ouput:</p>
+<ul class="simple">
+<li><p>characteristics of each feature</p></li>
+<li><p>spotting potential outliers and erroneous values</p></li>
+<li><p>summary of the findings</p></li>
+<li><p>potential characteristics in the feature that can extracted further for feature transforming in the datapipeline</p></li>
+</ul>
+<p>a.) Tips on the summary statistics</p>
+<p>Perform summary statistics separately on numerical vs categorial features so as certain statistics is not useful for categorical (eg. no percentiles for categorical) and vice-versa (eg. no frequency and unqiue count for continous numerical values).</p>
+<p>Python command (for reference):</p>
+<p>For numerical features:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  a) df.describe(include=[np.number]) 
+  b) df.numeric.describe()
+  c) df.describe(percentiles=[.1, .5, .9]))
+</pre></div>
+</div>
+<p>For categorical features:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  a) df.describe(exclude=[np.number])
+  b) df.describe(include=[object])  
+</pre></div>
+</div>
+<p>Others:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  a) df.describe(include=&#39;all&#39;)
+  b) df.describe(datetime_is_numeric=True)
+</pre></div>
+</div>
+<p>b.) Tips on the type of plot for univariate data (only one variable):</p>
 <ul>
-<li><p>spearman’s correlation</p></li>
-<li><p>pearson’s correlation</p></li>
+<li><p>Histogram chart (great for viewing distribution of features, and comparing
+between different group of data)</p>
+<p>Sample python command for choosing bin size</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sns.displot(df, x=&quot;&lt;column_name&gt;&quot;, binwidth=3)
+sns.displot(df, x=&quot;&lt;column_name&gt;&quot;, binwidth=20)
+</pre></div>
+</div>
+</li>
+<li><p>Kernel density estimation (KDE)</p>
+<p>A histogram aims to approximate the underlying probability density function that generated the data by binning and counting observations.</p>
+<p>Sample python command for choosing smoothing bandwidth</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sns.displot(df, x=&quot;&lt;column_name&gt;&quot;, kind=&quot;kde&quot;, bw_adjust=.25)
+sns.displot(df, x=&quot;&lt;column_name&gt;&quot;, kind=&quot;kde&quot;, bw_adjust=2)  
+</pre></div>
+</div>
+</li>
+<li><p>Stacked chart</p>
+<p>Avoid using if possible.</p>
+</li>
+<li><p>Line chart</p>
+<p>Commonly use in time-series data, mainly use to observe trend over a time period.</p>
+</li>
+<li><p>Pie chart</p>
+<p>Not recommended, use only if need to compare the size of each category.</p>
+</li>
+<li><p>Box plot</p>
+<p>Useful for identify 25%-50%-75% mark and outlier(s), only if the outlier is not extreme. Especially useful for indicating whether a distribution is skewed.</p>
+</li>
+</ul>
+</section>
+<section id="c-relationship-checks">
+<h2>2c) Relationship checks<a class="headerlink" href="#c-relationship-checks" title="Permalink to this headline">#</a></h2>
+<p>General guideline:</p>
+<p>To find out the relationship between feature and target so as to generate ideas for feature engineering and selection (feature importance). The goal is to identify multicollinear features or categories. Correlated features distort interpretability and feature importance, droping or merging some collinear features should be explored based on domain knowledge.</p>
+<p>Also, in the scenario if there are too few features in the data, feature engineering should be explored. Conversely if there are too many features, feature importance should be explored and then dropping less important features.</p>
+<p>The analysis should cover the following</p>
+<ul class="simple">
+<li><p>relationships between each feature and the target</p></li>
+<li><p>relationships between features</p></li>
+</ul>
+<p>Expected ouput:</p>
+<ul class="simple">
+<li><p>which features are postive/negative correlated to each other</p></li>
+<li><p>which features is more/less important to target label</p></li>
+<li><p>summary of the findings</p></li>
+<li><p>ideas on feature engineering/selection for feature transforming in the datapipeline</p></li>
+</ul>
+<p>a.) Tips on the pairwise correlation:</p>
+<ul>
+<li><p>Categorical vs Categorical</p>
+<ul>
+<li><p>Crosstabs</p>
+<p>Compute a simple cross tabulation of two (or more) factors.</p>
+<p>Sample Python command (for reference):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>s1 = pd.Categorical([&#39;p&#39;, &#39;q&#39;], categories=[&#39;p&#39;, &#39;q&#39;, &#39;r&#39;])
+b1 = pd.Categorical([&#39;s&#39;, &#39;t&#39;], categories=[&#39;s&#39;, &#39;t&#39;, &#39;u&#39;])
+pd.crosstab(s1, b1, dropna=False)
+</pre></div>
+</div>
+</li>
 </ul>
 </li>
-<li><p>categorical correlation plot (no negative correlation due the categorical features)</p>
+<li><p>Numerical vs Numerical correlation</p>
 <ul>
-<li><p>phik’s correlation matrix</p></li>
+<li><p>Spearman’s &amp; Pearson’s correlation</p>
+<p>Output single numerical value as the degree of correlation, no distribution. Key difference is Pearson coefficient works with a linear relationship between the two variables whereas the Spearman Coefficient works with monotonic relationships as well. (Monotonic relationship: rate at which an increase or decrease occurs does not necessarily have to be the same for both unlike linear relationship)</p>
+</li>
+<li><p>Seaborn’s pairplot</p>
+<p>It has distribution information and views strength of correlation by shape of distribution. “/” is positive correlated while “&quot; as negative correlated.</p>
+</li>
+</ul>
+</li>
+<li><p>Categorical &amp; numerical correlation (no negative correlation due the categorical features)</p>
+<ul>
+<li><p>Phi_K’s correlation matrix</p>
+<p>Phi_K is a new correlation coefficient between categorical, ordinal, and interval variables with Pearson characteristics (see article link at reference section)</p>
+</li>
+<li><p>Preprocessing method</p>
+<p>Converting categorical to numerical forms with techniques like ordinal or nominal encoding and then normalizing to the same scale so that it can be use for numerical vs numerical correlation.</p>
+</li>
 </ul>
 </li>
 </ul>
-<p>Side note:
-t-SNE and correlation plots are often time-consuming when generating chart.</p>
+<p>b.) Tips on the bivariate/multivariate correlation (two/three different variables):</p>
+<p>For comparing specific features</p>
+<ul>
+<li><p>Scatter plot</p>
+<p>Useful for examining up to 3 features together, hue as the 3rd feature. The hue feature can be categorical instead of numerical.</p>
+</li>
+<li><p>Joint plot</p>
+<p>Combination of scatter and distribution plot of first two features, hue as the 3rd feature. Additional distribution information is available as multiple same points is not easily detected in scatter plot.</p>
+</li>
+<li><p>Joint grid</p>
+<p>Combination of scatter and box plot of 2 features. Great for identifying 25%-50%-75% mark as additional information.</p>
+</li>
+<li><p>t-SNE plot</p>
+<p>Useful for examining features above 3 by compressing the multiple features into 2 dimension and hue as the target feature. This allows you to immediately discern whether the classes are separable based on the features.</p>
+</li>
+</ul>
+<p>c) Tips on feature engineering:</p>
+<p>Try to link the insights from the analysis to feature engineering. For example, if you find that number of deliveries (the target) is much higher on Mondays compared to the rest of the week, you could engineer a separate feature is_monday to boost the model’s performance.</p>
+<p>If certain feature have a very similar relationship to the target and are sparse, you could merge them during feature engineering to create a stronger feature. For instance, capital_gains and capital_loss can be merged into is_investor since if there are not many individuals who invest.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="others">
+<h1>Others<a class="headerlink" href="#others" title="Permalink to this headline">#</a></h1>
+<p>Pandas profiling and Google Facets are 2 excellent tools for performing EDA.</p>
+<p>Pandas profiling:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.analyticsvidhya.com/blog/2021/06/generate-reports-using-pandas-profiling-deploy-using-streamlit/">https://www.analyticsvidhya.com/blog/2021/06/generate-reports-using-pandas-profiling-deploy-using-streamlit/</a></p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/pandas-profiling/">https://pypi.org/project/pandas-profiling/</a></p></li>
+</ul>
+<p>Google Facets:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://towardsdatascience.com/visualising-machine-learning-datasets-with-googles-facets-462d923251b3">https://towardsdatascience.com/visualising-machine-learning-datasets-with-googles-facets-462d923251b3</a></p></li>
+<li><p><a class="reference external" href="https://github.com/PAIR-code/facets">https://github.com/PAIR-code/facets</a></p></li>
+</ul>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="references">
 <h1>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h1>
-<p><a class="reference external" href="https://miykael.github.io/blog/2022/advanced_eda/">https://miykael.github.io/blog/2022/advanced_eda/</a>
-<a class="reference external" href="https://www-users.york.ac.uk/~mb55/intro/typemiss4.htm">https://www-users.york.ac.uk/~mb55/intro/typemiss4.htm</a></p>
+<section id="article-link">
+<h2>Article link<a class="headerlink" href="#article-link" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="https://miykael.github.io/blog/2022/advanced_eda/">https://miykael.github.io/blog/2022/advanced_eda/</a></p>
+<p><a class="reference external" href="https://www-users.york.ac.uk/~mb55/intro/typemiss4.htm">https://www-users.york.ac.uk/~mb55/intro/typemiss4.htm</a></p>
+<p><a class="reference external" href="https://towardsdatascience.com/missforest-the-best-missing-data-imputation-algorithm-4d01182aed3">https://towardsdatascience.com/missforest-the-best-missing-data-imputation-algorithm-4d01182aed3</a></p>
+<p><a class="reference external" href="https://seaborn.pydata.org/tutorial/distributions.html">https://seaborn.pydata.org/tutorial/distributions.html</a></p>
+<p><a class="reference external" href="https://www.analyticsvidhya.com/blog/2022/02/a-quick-guide-to-bivariate-analysis-in-python/">https://www.analyticsvidhya.com/blog/2022/02/a-quick-guide-to-bivariate-analysis-in-python/</a></p>
+<p><a class="reference external" href="https://towardsdatascience.com/phik-k-get-familiar-with-the-latest-correlation-coefficient-9ba0032b37e7">https://towardsdatascience.com/phik-k-get-familiar-with-the-latest-correlation-coefficient-9ba0032b37e7</a></p>
+</section>
+<section id="video-link">
+<h2>Video link<a class="headerlink" href="#video-link" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=LMsULWGtP2c">https://www.youtube.com/watch?v=LMsULWGtP2c</a></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
