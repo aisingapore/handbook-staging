@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>What to look out for in my data sources to reduce the risks of data poisoning and data extraction? &#8212; AI Practitioner Handbook</title>
+    <title>What can I reduce the risks of data poisoning and data extraction? &#8212; AI Practitioner Handbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -249,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     What to look out for in my data sources to reduce the risks of data poisoning and data extraction?
+     What can I reduce the risks of data poisoning and data extraction?
     </a>
    </li>
   </ul>
@@ -546,12 +546,12 @@ title="Print to PDF"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-extraction-inference-inversion-attacks">
-   Data extraction (Inference/ Inversion attacks)
+   Data extraction (inference/inversion attacks)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-to-check-in-your-data-sources-and-how-it-relates-to-your-project">
-   What to check in your data sources, and how it relates to your project?
+  <a class="reference internal nav-link" href="#how-to-check-your-data-sources">
+   How to check your data sources
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -595,7 +595,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>What to look out for in my data sources to reduce the risks of data poisoning and data extraction?</h1>
+                <h1>What can I reduce the risks of data poisoning and data extraction?</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -612,12 +612,12 @@ title="Print to PDF"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-extraction-inference-inversion-attacks">
-   Data extraction (Inference/ Inversion attacks)
+   Data extraction (inference/inversion attacks)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-to-check-in-your-data-sources-and-how-it-relates-to-your-project">
-   What to check in your data sources, and how it relates to your project?
+  <a class="reference internal nav-link" href="#how-to-check-your-data-sources">
+   How to check your data sources
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -662,8 +662,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="what-to-look-out-for-in-my-data-sources-to-reduce-the-risks-of-data-poisoning-and-data-extraction">
-<h1>What to look out for in my data sources to reduce the risks of data poisoning and data extraction?<a class="headerlink" href="#what-to-look-out-for-in-my-data-sources-to-reduce-the-risks-of-data-poisoning-and-data-extraction" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="what-can-i-reduce-the-risks-of-data-poisoning-and-data-extraction">
+<h1>What can I reduce the risks of data poisoning and data extraction?<a class="headerlink" href="#what-can-i-reduce-the-risks-of-data-poisoning-and-data-extraction" title="Permalink to this headline">#</a></h1>
 <p>Contributor(s): Kew Wai Marn, AI Engineer</p>
 <section id="data-poisoning">
 <h2>Data poisoning<a class="headerlink" href="#data-poisoning" title="Permalink to this headline">#</a></h2>
@@ -671,23 +671,23 @@ title="Print to PDF"
 environment. Practically, this is time-consuming, and thus expensive, which not
 everyone can afford. Therefore, data is sometimes collected from the Internet or
 other untrusted sources. This poses a huge risk as an adversary can
-intentionally manipulate the data, which causes the ML system to be compromised
-(ie. inject training data with specific features that causes the model to fail
-during inference when inference data with such features are used; model
-“backdoors”).</p>
+intentionally manipulate the data, which causes the ML system to be compromised.
+For example, training data can be injected with specific features that causes the model to fail
+during inference when inference data with such features are used; i.e. model
+“backdoors”.</p>
 </section>
 <section id="data-extraction-inference-inversion-attacks">
-<h2>Data extraction (Inference/ Inversion attacks)<a class="headerlink" href="#data-extraction-inference-inversion-attacks" title="Permalink to this headline">#</a></h2>
+<h2>Data extraction (inference/inversion attacks)<a class="headerlink" href="#data-extraction-inference-inversion-attacks" title="Permalink to this headline">#</a></h2>
 <p>Other than manipulating the data, an adversary may extract details of the
 training data by querying the model or inspecting it directly. When
 the adversary has unlimited query access to the model, they can use that to
 predict whether or not a particular example was contained in the model’s
 training dataset.</p>
 </section>
-<section id="what-to-check-in-your-data-sources-and-how-it-relates-to-your-project">
-<h2>What to check in your data sources, and how it relates to your project?<a class="headerlink" href="#what-to-check-in-your-data-sources-and-how-it-relates-to-your-project" title="Permalink to this headline">#</a></h2>
+<section id="how-to-check-your-data-sources">
+<h2>How to check your data sources<a class="headerlink" href="#how-to-check-your-data-sources" title="Permalink to this headline">#</a></h2>
 <p>In order to reduce the risk of data poisoning and extraction, you should check
-the following in your ML system.</p>
+the following in your ML system:</p>
 <section id="proper-access-control-to-protect-the-raw-and-processed-data-from-unauthorized-users">
 <h3>1. Proper access control to protect the raw and processed data from unauthorized users.<a class="headerlink" href="#proper-access-control-to-protect-the-raw-and-processed-data-from-unauthorized-users" title="Permalink to this headline">#</a></h3>
 <p>To prevent data manipulation, the first thing to do is to secure it (e.g. only
@@ -697,22 +697,22 @@ authorized personnel are allowed to access within a specified time frame).</p>
 <h3>2. Ensure the integrity of the data sources for your ML system<a class="headerlink" href="#ensure-the-integrity-of-the-data-sources-for-your-ml-system" title="Permalink to this headline">#</a></h3>
 <p>Other than securing your data, it is important to know about the data’s history
 ie. data generation, collection, and assembly process, especially if the source
-is public. Furthermore, list down any potential considerations for data quality
+is public. In addition, list down any potential considerations for data quality
 (e.g. trustworthiness, reliability, etc), so that it is easy to backtrack when
 necessary.</p>
 <p>Examples of considerations and measures:</p>
 <ul class="simple">
-<li><p>How do you ensure that the raw data was not manipulated or poisoned (even by
-authorized personnel)?</p></li>
+<li><p>How do you ensure that the raw data was not manipulated or poisoned, even by
+authorized personnel?</p></li>
 <li><p>Have you implemented measures in the data collection process to ensure the
 reliability of the data collected? (e.g. if your raw data is collected from
-sensors, possible measures to ensure reliability are regular re-calibration,
+sensors, possible measures to ensure reliability include regular re-calibration,
 and/or redundant streams with multiple correlated and overlapping sensors)</p></li>
 <li><p>How do you assure the quality of your labeling process, and validate the
 resulting labels?</p></li>
 </ul>
-<p>The main idea is to not use data blindly, do take time to understand the data
-source. You can also analyse the data to look for inconsistencies ie. look at
+<p>The main idea is to not use data blindly. Take time to understand the data
+source,. You can also analyse the data to look for inconsistencies i.e. look at
 feature value range, statistics ie. mean for numerical data, data frequencies
 for categorical data.</p>
 </section>
