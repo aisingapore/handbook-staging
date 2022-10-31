@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>What are the checklist of items to look out for to ensure reproducibility of the model pipeline as much as possible? &#8212; AI Practitioner Handbook</title>
+    <title>How can I maximise model reproducibility? &#8212; AI Practitioner Handbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -271,7 +271,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     What are the checklist of items to look out for to ensure reproducibility of the model pipeline as much as possible?
+     How can I maximise model reproducibility?
     </a>
    </li>
    <li class="toctree-l2">
@@ -545,8 +545,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-to-check-to-ensure-model-reproducibility">
-   What to check to ensure model reproducibility?
+  <a class="reference internal nav-link" href="#model-reproducibility-checklist">
+   Model reproducibility checklist
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -607,7 +607,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>What are the checklist of items to look out for to ensure reproducibility of the model pipeline as much as possible?</h1>
+                <h1>How can I maximise model reproducibility?</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -623,8 +623,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-to-check-to-ensure-model-reproducibility">
-   What to check to ensure model reproducibility?
+  <a class="reference internal nav-link" href="#model-reproducibility-checklist">
+   Model reproducibility checklist
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -686,21 +686,20 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="what-are-the-checklist-of-items-to-look-out-for-to-ensure-reproducibility-of-the-model-pipeline-as-much-as-possible">
-<h1>What are the checklist of items to look out for to ensure reproducibility of the model pipeline as much as possible?<a class="headerlink" href="#what-are-the-checklist-of-items-to-look-out-for-to-ensure-reproducibility-of-the-model-pipeline-as-much-as-possible" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="how-can-i-maximise-model-reproducibility">
+<h1>How can I maximise model reproducibility?<a class="headerlink" href="#how-can-i-maximise-model-reproducibility" title="Permalink to this headline">#</a></h1>
 <p>Contributor(s): Kew Wai Marn, AI Engineer</p>
 <section id="model-reproducibilty">
 <h2>Model reproducibilty<a class="headerlink" href="#model-reproducibilty" title="Permalink to this headline">#</a></h2>
+<p>Reproducible models are important because they allow independent practitioners to
+achieve the same results, which improves communication and collaboration. Furthermore,
+reproducible models are less error-prone and more reliable.</p>
 <p>Apart from ensuring reproducibilty in the data and the code of the ML system,
-you would need to check your model as well. Assuming you have the same training
+you would need to check your model logic as well. Assuming you have the same training
 code, and the same training data, you should be able to produce the same model.</p>
-<p>Reproducible models are important because it allows independent researchers to
-be able to achieve the same results, which improves communication and
-collaboration. Furthermore, reproducible models makes them less error-prone which
-increases its reliability.</p>
 </section>
-<section id="what-to-check-to-ensure-model-reproducibility">
-<h2>What to check to ensure model reproducibility?<a class="headerlink" href="#what-to-check-to-ensure-model-reproducibility" title="Permalink to this headline">#</a></h2>
+<section id="model-reproducibility-checklist">
+<h2>Model reproducibility checklist<a class="headerlink" href="#model-reproducibility-checklist" title="Permalink to this headline">#</a></h2>
 <p>If you have the same training code, and the same training data, but you are
 not able to produce the same model, below are several things you should check to
 ensure reproducibility of your model. The main goal is to reduce
@@ -715,9 +714,9 @@ things to test your model for.</p>
 libraries are constantly getting upgraded, you need to make sure the API calls
 are working as expected. Write unit tests with random input data running
 through the API call (ie. a single step of gradient descent).</p>
-<p>To reduce the risk of API calls breaking, you can version the libraries used eg.
+<p>To reduce the risk of API calls breaking, you can version the libraries used; eg.
 create a software enviroment with specific and static dependency versions
-recorded down in a requirements file.</p>
+recorded in a requirements file.</p>
 </section>
 <section id="b-algorithmic-correctness">
 <h4>b. Algorithmic correctness<a class="headerlink" href="#b-algorithmic-correctness" title="Permalink to this headline">#</a></h4>
@@ -728,18 +727,18 @@ is not due to luck.</p>
 <li><p>Verify that the loss decreases with increasing training iterations.</p></li>
 <li><p>Verify that without regularization, the training loss is low enough. If your
 model is complex enough, it will capture information from the training data.</p></li>
-<li><p>Test specific subcomputations of your algorithm. (ie. test that neural network
+<li><p>Test specific subcomputations of your algorithm. (e.g. test that neural network
 weights are updated with every pass).</p></li>
 </ul>
 </section>
 <section id="c-test-that-model-is-stable">
 <h4>c. Test that model is stable<a class="headerlink" href="#c-test-that-model-is-stable" title="Permalink to this headline">#</a></h4>
-<p>A stable model would be reproducible as it produces consistent results. During
-model training for nerual networks, your weights and layer outputs should not be
+<p>A stable model would be reproducible as it produces consistent results. When training
+a neural network, your weights and layer outputs should not be
 <code class="docutils literal notranslate"><span class="pre">NaN</span></code> or <code class="docutils literal notranslate"><span class="pre">Inf</span></code>. A given layer should also not return zeroes for more than half
 of its outputs. Write tests to check for <code class="docutils literal notranslate"><span class="pre">NaN</span></code> and <code class="docutils literal notranslate"><span class="pre">Inf</span></code> values in your weights
 and layer outputs.</p>
-<p>Furthermore, do sensitivity analysis on the hyperparameters of your ML system
+<p>Furthermore, perform sensitivity analysis on the hyperparameters of your ML system
 to ensure system hyperparameter stability.</p>
 </section>
 </section>
@@ -749,12 +748,12 @@ to ensure system hyperparameter stability.</p>
 value across all the libraries in the code base in order to reduce
 non-deterministic behaviours eg. weight initialization, regularization, and
 optimization in neural networks, split points in random forest algorithm.</p>
-<p>Seeding the RNG from python ie. <code class="docutils literal notranslate"><span class="pre">random.seed()</span></code> is not enough as certain
-packages have their own implementation of a pseudorandom number generator
-eg. NumPy. Do check their documentation on how they generate the random numbers.</p>
+<p>Seeding the RNG from pPython (i.e. <code class="docutils literal notranslate"><span class="pre">random.seed()</span></code>) is not enough as some
+packages have their own implementation of a pseudo-random number generator
+(e.g. NumPy). Do check their documentation on how they generate the random numbers.</p>
 <p>However, there will still be areas of randomness that are irreducible, such as
-randomness in third party libraries and in configurations of GPUs. Refer to this
-<a class="reference external" href="#inherent-stochasticity">section</a>.</p>
+randomness in third party libraries and in GPUs configurations. Please refer to this
+<a class="reference external" href="#inherent-stochasticity">section</a> for more information.</p>
 </section>
 <section id="model-version-control">
 <h3>3. Model version control<a class="headerlink" href="#model-version-control" title="Permalink to this headline">#</a></h3>
@@ -768,23 +767,22 @@ model versions.</p>
 <section id="integration-tests">
 <h3>4. Integration tests<a class="headerlink" href="#integration-tests" title="Permalink to this headline">#</a></h3>
 <p>As a ML pipeline consiste of several components, tests that runs the entire
-pipeline end-to-end should be written. To run integration tests faster, train on
+pipeline end-to-end should be written. To run integration tests more quickly, train on
 a subset of the data or with a simpler model.</p>
 </section>
 <section id="logging">
 <h3>5. Logging<a class="headerlink" href="#logging" title="Permalink to this headline">#</a></h3>
-<p>It is important to log everything used in ML modelling (ie. model parameters,
+<p>It is important to log everything used in ML modelling (e.g. model parameters,
 hyperparameters, feature transformations, order of features, method to select
-them, structure of the ensemble (if ensembles were used), specifications of
-the hardware used to run the model). This would help to recreate the environment
-the model was created in. Furthermore, there should be reporting of any
-dependency changes, eg. changes in API calls should be notified.</p>
+them, structure of the ensemble (if applicable), hardware specifications). This
+would help to recreate the environment the model was created in. Furthermore,
+dependency changes (e.g. changes in API calls) should be recorded.</p>
 </section>
 </section>
 <section id="inherent-stochasticity">
 <h2>Inherent stochasticity<a class="headerlink" href="#inherent-stochasticity" title="Permalink to this headline">#</a></h2>
-<p>As mentioned earlier, the entire ML pipeline is not always reproducible. There
-exist inherent stochasticity, such as when using GPUs, randomness in backend
+<p>As mentioned earlier, the ML pipeline is not always entirely reproducible. Inherent
+stochasticity exists in some components, such as when using GPUs, randomness in backend
 libraries, and stochastic ML algorithms. In order to improve reproducibility,
 you can report the average performance of your model using multiple runs or even
 build an ensemble of models, each trained with a different random number seed.
