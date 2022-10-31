@@ -748,7 +748,7 @@ to ensure system hyperparameter stability.</p>
 value across all the libraries in the code base in order to reduce
 non-deterministic behaviours eg. weight initialization, regularization, and
 optimization in neural networks, split points in random forest algorithm.</p>
-<p>Seeding the RNG from pPython (i.e. <code class="docutils literal notranslate"><span class="pre">random.seed()</span></code>) is not enough as some
+<p>Seeding the RNG from Python (i.e. <code class="docutils literal notranslate"><span class="pre">random.seed()</span></code>) is not enough as some
 packages have their own implementation of a pseudo-random number generator
 (e.g. NumPy). Do check their documentation on how they generate the random numbers.</p>
 <p>However, there will still be areas of randomness that are irreducible, such as
