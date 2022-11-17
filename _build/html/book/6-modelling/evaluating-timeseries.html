@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>How can we better evaluate Time-Series models? &#8212; AI Practitioner Handbook</title>
+    <title>How can we better evaluate Time-Series classification models? &#8212; AI Practitioner Handbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -522,7 +522,7 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   How can we better evaluate Time-Series models?
+   How can we better evaluate Time-Series classification models?
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -566,7 +566,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>How can we better evaluate Time-Series models?</h1>
+                <h1>How can we better evaluate Time-Series classification models?</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -578,7 +578,7 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   How can we better evaluate Time-Series models?
+   How can we better evaluate Time-Series classification models?
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -623,21 +623,20 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="how-can-we-better-evaluate-time-series-models">
-<h1>How can we better evaluate Time-Series models?<a class="headerlink" href="#how-can-we-better-evaluate-time-series-models" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="how-can-we-better-evaluate-time-series-classification-models">
+<h1>How can we better evaluate Time-Series classification models?<a class="headerlink" href="#how-can-we-better-evaluate-time-series-classification-models" title="Permalink to this headline">#</a></h1>
 <p>Contributor(s): Andy Ong, AI Engineer</p>
-<p>This guide assumes that you have a fair understanding of the typical classification evaluation metrics.</p>
+<p>This guide assumes that you have a fair understanding of the typical classification evaluation metrics. This <a class="reference internal" href="eval-metrics.html"><span class="doc std std-doc">article</span></a> provides a high-level discussion of the various evaluation metrics used in most projects.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="time-series-classification">
 <h1>Time-Series Classification<a class="headerlink" href="#time-series-classification" title="Permalink to this headline">#</a></h1>
-<p>Time-Series models can be evaluated using conventional regression and classification evaluation metrics. For regression problems, we can use Mean Squared Error(MSE) or Root Mean Square Error(RMSE) to evaluate. Recall, precision or F1 Score can be used to evaluate classification models, depending on the business needs.</p>
-<p>For a time-series classification project, the typical approach is to view every timepoints individually. We will then evaluate the model by looking at its F1 Score or precision and recall (similar to a normal classification problem). However, this can be too sensitive for a time-series dataset.</p>
-<p>Thus, these evaluation metrics might not be sufficient to properly evaluate Time-Series models. In this guide, I will talk about different approaches that can be taken to evaluate Time-Series models.</p>
+<p>Time-series models can be evaluated using conventional regression and classification evaluation metrics. For regression problems, we can use Mean Squared Error(MSE) or Root Mean Square Error(RMSE) to evaluate. This article focuses on time-series classification problems, where the outcome to be predicted/forecasted is categorical. Recall, precision or F1 Score can be used to evaluate classification models, depending on the business needs.</p>
+<p>For a time-series classification project, a simple approach is to view every timepoints individually, and evaluate the model by looking at its F1 Score or precision and recall (similar to a non-time-series classification problem). These evaluation metrics might not be adequate to assess time-series models fairly. It is susceptible to noise. It also ignores the autocorrelated nature of time-series data, which tends to result in sequences of points falling into the same class, rather than one-off occurrences.</p>
 <section id="time-segments">
 <h2>Time Segments<a class="headerlink" href="#time-segments" title="Permalink to this headline">#</a></h2>
 <p><img alt="Groundtruth and Detected graph" src="../../_images/groundtruth-and-detected.png" /></p>
 <p>Taking the above time-series ground truth and detection as an example, we have three ground truth anomalies, and 2 predicted anomalies.</p>
-<p>In this approach, we will view every timepoints in segments. In the graph below, there are 7 segments, which consist of 2 True Positives, 1 False Positive, 1 False Negatives and 3 True negatives. By viewing our timepoints as segments, we can have a less sensitive yet strict approach.</p>
+<p>In this approach, we will view every timepoints in segments. In the graph below, there are 7 segments, which consist of 2 True Positives (TP), 1 False Positive(FP), 1 False Negatives(FN) and 3 True negatives(TN). By viewing our timepoints as segments, we can have a less sensitive yet strict approach.</p>
 <p><img alt="Time Segment graph" src="../../_images/time-segmented-graph.png" /></p>
 </section>
 <section id="overlapping-segment">
@@ -648,7 +647,7 @@ title="Print to PDF"
 </section>
 <section id="case-study">
 <h2>Case Study<a class="headerlink" href="#case-study" title="Permalink to this headline">#</a></h2>
-<p>The ground truth and model prediction values for Company A’s newly built Time-Series Anomaly Detection model are as follows:</p>
+<p>Company A is attempting to build an Anomaly Detection model to predict any machinery failures. The ground truth and model prediction values for their model are as follows:</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
