@@ -550,17 +550,17 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#overview">
    Overview
   </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#understanding-the-problem-and-environment">
-   1. Understanding the problem and environment
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#optimizing-metrics">
-   2. Optimizing metrics
-  </a>
   <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#understanding-the-problem-and-environment">
+     1. Understanding the problem and environment
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#optimizing-metrics">
+     2. Optimizing metrics
+    </a>
+   </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-selecting-metrics-for-classification-problems">
      a.) Selecting metrics for classification problems
@@ -571,12 +571,12 @@ title="Print to PDF"
      b.) Selecting metrics for regression problems
     </a>
    </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#satisficing-metrics">
+     3. Satisficing metrics
+    </a>
+   </li>
   </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#satisficing-metrics">
-   3. Satisficing metrics
-  </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reference">
@@ -611,17 +611,17 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#overview">
    Overview
   </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#understanding-the-problem-and-environment">
-   1. Understanding the problem and environment
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#optimizing-metrics">
-   2. Optimizing metrics
-  </a>
   <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#understanding-the-problem-and-environment">
+     1. Understanding the problem and environment
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#optimizing-metrics">
+     2. Optimizing metrics
+    </a>
+   </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-selecting-metrics-for-classification-problems">
      a.) Selecting metrics for classification problems
@@ -632,12 +632,12 @@ title="Print to PDF"
      b.) Selecting metrics for regression problems
     </a>
    </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#satisficing-metrics">
+     3. Satisficing metrics
+    </a>
+   </li>
   </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#satisficing-metrics">
-   3. Satisficing metrics
-  </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reference">
@@ -669,27 +669,32 @@ title="Print to PDF"
 </li>
 <li><p>Satisficing metrics</p></li>
 </ol>
+<section id="understanding-the-problem-and-environment">
+<h2>1. Understanding the problem and environment<a class="headerlink" href="#understanding-the-problem-and-environment" title="Permalink to this headline">#</a></h2>
+<p><u>Problem statement &amp; deployment environment</u></p>
+<p>Understanding how the AI/ML solves the problem statement help to identify the correct optimizing metrics (explained in section 2) to determine the performance of the model. At the same time, understanding the deployment environment will helps in choosing the satisficing metrics (explained in section 3). In most case, optimizing metrics tend to be the ML metrics, while satisficing metrics tend to be the non-ML metrics.</p>
+<p><u>Technical competence of the different stakeholders</u></p>
+<p>Understanding the level of competence of the end-users or technical team maintaining the AI/ML model help to identify a <b>comfortable</b> metrics (explained in section 2) to use</p>
+<ul class="simple">
+<li><p>for ease of communicating with end-users during project phase</p></li>
+<li><p>allows the technical team to easily understand the metric that was used, hence able to improve the AI/ML model after the project handover</p></li>
+</ul>
+<p><u>Summary</u></p>
+<p>The main purpose is to understand the problem and stakeholders, as there is often a trade-off between ML and non-ML metrics on the whole. For instance, a more complex model tends to come with larger training and inference time. Hence, sponsors are faced with a choice as to which metrics to prioritise based on the business value of the AI solution.</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="understanding-the-problem-and-environment">
-<h1>1. Understanding the problem and environment<a class="headerlink" href="#understanding-the-problem-and-environment" title="Permalink to this headline">#</a></h1>
-<p>a. Problem statement</p>
-<p>Understanding how the AI/ML solves the problem statement help to identify the correct optimizing metrics (explained in section 2) to determine the preformance of the model.</p>
-<p>b. Technical competence of the different stakeholders</p>
-<p>Understanding the level of competence of the stakeholder help to identify which optimizing metrics (explained in section 2) to use when communicating with them.</p>
-<p>c. Deployment environment</p>
-<p>Understanding the deployment enviornment will helps in choosing the satisficing metrics explained in section 3.</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="optimizing-metrics">
-<h1>2. Optimizing metrics<a class="headerlink" href="#optimizing-metrics" title="Permalink to this headline">#</a></h1>
+<section id="optimizing-metrics">
+<h2>2. Optimizing metrics<a class="headerlink" href="#optimizing-metrics" title="Permalink to this headline">#</a></h2>
 <p>The goal is to establish a single-number evaluation metric, as having multiple evaluation metrics make it hard to compare against different algorithms.</p>
 <p>For instance, Classifier A has precision of 95% with recall of 90% and Classifier B has precision of 98% with recall of 85%, Neither classifier is obviously superior and does not immediately guide you towards picking one.</p>
 <p>When comparing with different model in classification problem with multiple class, combined metrics of each class into single metric using average on weighted average. However, keep the metrics separated if you are evaluating the class performance instead of the model performance.</p>
+</section>
 <section id="a-selecting-metrics-for-classification-problems">
 <h2>a.) Selecting metrics for classification problems<a class="headerlink" href="#a-selecting-metrics-for-classification-problems" title="Permalink to this headline">#</a></h2>
-<p>This section covers some of the most common metrics used for evaluating model for classification problems. Do note that this is not exhaustive list but covers the some of common high level metrics that are useful when communicating with stakeholders.</p>
+<p>This section covers some of the most common metrics used for evaluating model for classification-related problems, which cuts across diverse use cases like objection detection, named entity recognition (NER), anomaly detection, recommender systems, etc. In these problems, the precision, recall and F1 family is a very generic and flexible metrics that can be applied throughout.</p>
+<p><u>Commonly used evaluation metrics</u></p>
 <ol>
 <li><p>Accuracy = <span class="math notranslate nohighlight">\(\frac{TP + TN}{TP + FP + TN + FN}\)</span></p>
-<p>Simple for explaining to stakeholders but not suitable if the dataset is unbalanced.</p>
+<p>Avoid using this metrics as it is usually not suitable for practical usages due to the fact it contains many flaws as a evaluation metrics.</p>
 </li>
 <li><p>Precision = <span class="math notranslate nohighlight">\(\frac{TP}{TP+FP}\)</span></p>
 <p>Simplified explaination: Out of the <u>positive predictions</u>, how many are correct. It focuses on finding positive cases.</p>
@@ -698,27 +703,51 @@ title="Print to PDF"
 <p>Simplified explaination: Out of the <u>actual positive</u>, how many are correct. It focuses on weeding out the negative cases.</p>
 </li>
 <li><p>F1 Score = 2 * <span class="math notranslate nohighlight">\(\frac{Precision * Recall}{Precision + Recall}\)</span></p>
-<p>F1 score is the weighted mean of precision and recall</p>
+<p>F1 score is the harmonic mean of precision and recall</p>
 </li>
 </ol>
-<p>Precision is more important than recall when you cannot afford to have any FP as compare to FN. Often associate with cost, when cost of acting is high but the cost of not acting is low, then precision is preferred. Recall is more important than precision whe you cannot afford to have any FN as compare to FP. It is more important when the opportunity cost of passing up is high.</p>
-<p>Example: Missing out to detect spam email is okay but missing out of detecting fraud or disease is high (use recall metrics for the latter). Finding as many spam email is desirable than missing out to detect spam email (use precision).</p>
+<p><u>Considerations</u></p>
+<p>Precision is more important than recall when you cannot afford to have any FP as compare to FN. Often associate with cost, when cost of acting is high but the cost of not acting is low, then precision is preferred. Recall is more important than precision when you cannot afford to have any FN as compare to FP. It is more important when the opportunity cost of passing up is high.</p>
+<p>Example: The opportunity cost is low when there is certain recommendation were missing out but more costly when there is a wrong recommendation as it translates to not buying the recommended item, then precision is preferred. The opportunity cost of missing out of detecting fraud or disease would be high as compare to cost of acting to perform routine check on non-fraud/non-disease case, then recall is preferred.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>Recommender System</p></th>
+<th class="head"><p>Fraud/Disease Detection</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>TP</p></td>
+<td><p>Marked as preferred, is preferred</p></td>
+<td><p>Marked as fraud/disease, is fraud/disease</p></td>
+</tr>
+<tr class="row-odd"><td><p>FP</p></td>
+<td><p><b>Marked as preferred, not preferred</b></p></td>
+<td><p>Marked as fraud/disease, not fraud/disease</p></td>
+</tr>
+<tr class="row-even"><td><p>TN</p></td>
+<td><p>Not marked as preferred, not preferred</p></td>
+<td><p>Not Marked as fraud/disease, not fraud/disease</p></td>
+</tr>
+<tr class="row-odd"><td><p>FN</p></td>
+<td><p>Not marked as preferred, is preferred</p></td>
+<td><p><b>Not marked as fraud/disease, is fraud/disease</b></p></td>
+</tr>
+</tbody>
+</table>
 <p>If both Precision and Recall are equally important than F1 score should be used. There are variation of F1 score:</p>
 <ul class="simple">
 <li><p>micro (globally by counting total positive)</p></li>
-<li><p>macro (calculate f1 for each label then complete <u>unweighted</u> mean)</p></li>
-<li><p>weighted (calculate f1 for each label then complete <u>weighted</u> mean)</p></li>
+<li><p>macro (calculate f1 for each label then perform unweighted mean)</p></li>
+<li><p>weighted (calculate f1 for each label then perform weighted mean)</p></li>
 </ul>
-<p>Use weighted f1 when data is unbalanced.</p>
-<ol>
-<li><p>Others common metrics</p>
-<p>a. ROC curve (receiver operating characteristic curve)</p>
-<p>b. AUC (Area Under the ROC Curve)</p>
-<p>c. Confusion matrix</p>
-<p>d. Loss functions</p>
-</li>
-</ol>
-<p>Confusion matrix may be required in there is a need to see the exact number of TP, TN, FP, FN, sometimes uses for more technical-inclined stakeholders. Both metrics in 5a &amp; 5b requires predicted labels &amp; predicted probabilities in order to plot curve, avoid using when extracting proabilities is not possible or difficult. For loss functions, there is binary cross-entropy and multi-class entropy for binary/multi-class classification problems. These metrics are often used by internal development team.</p>
+<p>When using weighted/micro f1 for imbalanced data means we are assessing the model while prioritising the majority class (as minority class have lesser influence over the final f1 score). When using macro f1 for imbalanced data, it means that we give equal importance to the minority class (minority class have same weightage as majority, hence greater influence over the final f1 score).</p>
+<p>Hence if the data is unbalanced, the choice between weighted and unweighted is dependent on the business objective. If the minority class is the ‘costly’, then weighted/micro f1 is not suitable since it does not give the same influence/weightage for minority class, then it would be better to assess based on macro f1.</p>
+<p>To summarize, there are often few tradeoffs in choosing one metrics over another. Below is some common questions to ask the stakeholders in order to recommend a suitable metrics for the problem that AI/ML is trying to solve.</p>
+<ul class="simple">
+<li><p>Is precision or recall more important? or are they all equally important?</p></li>
+<li><p>Which class is more important, or are they all equally important?</p></li>
+</ul>
 </section>
 <section id="b-selecting-metrics-for-regression-problems">
 <h2>b.) Selecting metrics for regression problems<a class="headerlink" href="#b-selecting-metrics-for-regression-problems" title="Permalink to this headline">#</a></h2>
@@ -728,25 +757,25 @@ title="Print to PDF"
 <p>Average of the squared differences between the actual and the predicted values. The lower the value, the better the regression model. It penalizes the outliers most.</p>
 </li>
 <li><p>Root Mean Square Error (RMSE)</p>
-<p>Square root of MSE, used when MSE value is too big for comparsion</p>
+<p>Square root of MSE, recommends to use when MSE value is too big for comparsion</p>
 </li>
 <li><p>Mean Absolute Error (MAE)</p>
 <p>Similar to Mean Square Error (MSE) but taking sum of absolute value of error. MSE gives larger penalization to big prediction error as compare to MAE.</p>
 </li>
 </ol>
-<p>MSE, RMSE, MAE are not very useful when comparing against different models when outliers that is presented very extreme.</p>
+<p><u>Considerations</u></p>
+<p>MSE, RMSE, MAE are not very useful when comparing against different models when outliers that is presented are very extreme.</p>
 <ol>
 <li><p>R2</p>
 <p>One of the popular metrics, express as percentage. Large R2 value indicates a better fit, the closer to 1, the better the regression model. Easier for comparsion against different models as it ranges from 0 to 1.</p>
 </li>
 <li><p>Adjusted R Square</p>
-<p>Similar to R2 but adds precision and reliabilty by considering additional independent variables that tend to skew the results of R-squared measurements</p>
+<p>Similar to R2 but adds precision and reliabilty by considering additional independent variables that tend to skew the results of R-squared measurements.</p>
 </li>
 </ol>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="satisficing-metrics">
-<h1>3. Satisficing metrics<a class="headerlink" href="#satisficing-metrics" title="Permalink to this headline">#</a></h1>
+<section id="satisficing-metrics">
+<h2>3. Satisficing metrics<a class="headerlink" href="#satisficing-metrics" title="Permalink to this headline">#</a></h2>
 <p>Satisficing is a decision making strategy that aims for a satisfactory or adequate results rather than the optimal solution. Sometimes, it is hard to get a single number evaluation metric due to the non-ML metrics.</p>
 <p>Example of some non-ML metrics</p>
 <ul class="simple">
@@ -755,7 +784,7 @@ title="Print to PDF"
 <li><p>memory usage</p></li>
 <li><p>size of model (more applicable for deployment on edge device)</p></li>
 </ul>
-<p>It is not practical or cost efficient to increase the optimizing metrics by a minuscule percentage, using longer training time which results in higher cost. Deployment consideration (eg. size of model, runtime) may also affect the usablity of the model.</p>
+<p>It is not practical or cost efficient to increase the optimizing metrics by a minuscule percentage, using longer training time which results in higher cost.  Deployment consideration (eg. size of model, runtime) may also affect the usablity of the model.</p>
 <p>a) One approach is to derive a single metrics by forumla</p>
 <p>For instance:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  metrics = accuracy of model - 0.5 * runtime
@@ -764,11 +793,12 @@ title="Print to PDF"
 <p>b) Another approach is to define what is an “acceptable” threshold for the satisficing metrics, then maximize the optimizing metrics.</p>
 <p>Once your team is aligned on the evaluation metric to optimize, they will be able to make faster progress.</p>
 </section>
+</section>
 <section class="tex2jax_ignore mathjax_ignore" id="reference">
 <h1>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">#</a></h1>
-<p><a class="reference external" href="https://github.com/ajaymache/machine-learning-yearning/blob/master/full%20book/machine-learning-yearning.pdf">https://github.com/ajaymache/machine-learning-yearning/blob/master/full book/machine-learning-yearning.pdf</a></p>
-<p><a class="reference external" href="https://www.davidsbatista.net/blog/2018/05/09/Named_Entity_Evaluation/">https://www.davidsbatista.net/blog/2018/05/09/Named_Entity_Evaluation/</a></p>
-<p><a class="reference external" href="https://towardsdatascience.com/iou-a-better-detection-evaluation-metric-45a511185be1">https://towardsdatascience.com/iou-a-better-detection-evaluation-metric-45a511185be1</a></p>
+<p><a href="https://github.com/ajaymache/machine-learning-yearning/blob/master/full%20book/machine-learning-yearning.pdf">Chapter 8 and 9 of Andrew’s Ng</a></p>
+<p><a href="https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9">Accuracy, Precision, Recall or F1</a></p>
+<p><a href="https://towardsdatascience.com/micro-macro-weighted-averages-of-f1-score-clearly-explained-b603420b292f">Micro, Macro &amp; Weighted Averages of F1</a></p>
 </section>
 
     <script type="text/x-thebe-config">
