@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>What are some questions that an AI engineer can ask the project sponsor to assess their AI capabilities? &#8212; AI Practitioner Handbook</title>
+    <title>What are some questions that an AI engineer can ask the client during pre-project scoping to assess their AI readiness? &#8212; AI Practitioner Handbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -151,7 +151,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     What are some questions that an AI engineer can ask the project sponsor to assess their AI capabilities?
+     What are some questions that an AI engineer can ask the client during pre-project scoping to assess their AI readiness?
     </a>
    </li>
   </ul>
@@ -168,7 +168,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../2-proj-mgmt-tech-lead/principles.html">
-     Setting Team Principles
+     What kind of engineering principles can I set for my development team?
     </a>
    </li>
    <li class="toctree-l2">
@@ -249,12 +249,12 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../5-data-mgmt-exp-proc/e2e-workflow.html">
-     What are the Processes Involved in Building a Basic End-to-End Workflow?
+     What are the processes involved in building a basic end-to-end Workflow?
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../5-data-mgmt-exp-proc/e2e-workflow-adv.html">
-     How do I Enhance the Workflow with Quality-of-Life Improvements for My End-to-End Workflow?
+     How do I enhance the workflow with quality-of-life improvements for my end-to-end workflow?
     </a>
    </li>
    <li class="toctree-l2">
@@ -318,7 +318,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../7-solution-delivery/min-viable-code.html">
-     How Can We Build a Minimum Viable Code/Configuration for CI/CD Automation Into an Existing Codebase?
+     How can we build a minimum viable code/configuration for CI/CD automation into an existing codebase?
     </a>
    </li>
   </ul>
@@ -560,8 +560,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-does-ai-engineer-need-to-assess-project-sponsor-s-ai-capabilities">
-   Why does AI engineer need to assess project sponsor’s AI capabilities?
+  <a class="reference internal nav-link" href="#why-does-ai-engineer-need-to-assess-client-s-ai-capabilities">
+   Why does AI engineer need to assess client’s AI capabilities?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -600,7 +600,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>What are some questions that an AI engineer can ask the project sponsor to assess their AI capabilities?</h1>
+                <h1>What are some questions that an AI engineer can ask the client during pre-project scoping to assess their AI readiness?</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -616,8 +616,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-does-ai-engineer-need-to-assess-project-sponsor-s-ai-capabilities">
-   Why does AI engineer need to assess project sponsor’s AI capabilities?
+  <a class="reference internal nav-link" href="#why-does-ai-engineer-need-to-assess-client-s-ai-capabilities">
+   Why does AI engineer need to assess client’s AI capabilities?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -657,23 +657,17 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="what-are-some-questions-that-an-ai-engineer-can-ask-the-project-sponsor-to-assess-their-ai-capabilities">
-<h1>What are some questions that an AI engineer can ask the project sponsor to assess their AI capabilities?<a class="headerlink" href="#what-are-some-questions-that-an-ai-engineer-can-ask-the-project-sponsor-to-assess-their-ai-capabilities" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="what-are-some-questions-that-an-ai-engineer-can-ask-the-client-during-pre-project-scoping-to-assess-their-ai-readiness">
+<h1>What are some questions that an AI engineer can ask the client during pre-project scoping to assess their AI readiness?<a class="headerlink" href="#what-are-some-questions-that-an-ai-engineer-can-ask-the-client-during-pre-project-scoping-to-assess-their-ai-readiness" title="Permalink to this headline">#</a></h1>
 <p>Contributor: Joy Lin, Senior AI Technical Consultant</p>
 <hr class="docutils" />
 <section id="who-is-this-for">
 <h2>Who is this for?<a class="headerlink" href="#who-is-this-for" title="Permalink to this headline">#</a></h2>
-<p>Are you:</p>
-<ul class="simple">
-<li><p>an AI engineer in a solution provider organisation building a solution for another organisation?</p></li>
-<li><p>or an in-house AI engineer in an organisation building a solution for another business unit?</p></li>
-</ul>
-<p>If you answer “Yes” above, read on to find out how you can assess the AI readiness level of the organisation or unit, henceforth referred to as “PS” (i.e. project sponsor).</p>
-<p>In an organisation, the business development/presales team usually scope for feasible AI projects, while assessing the PS’s capabilities to ensure smooth handover of the final AI solution.</p>
+<p>This article is aimed at AI engineers in an organisation like AI Singapore, who are building a solution for another company (henceforth referred to as the client) to take over and implement. In AI Singapore, the business development/presales team, together with the AI engineer, scope for feasible AI projects. In doing so, they assess whether the client has the capability to take over the final solution, integrate and maintain it, as the goal is to enable companies to build their own AI capabilities in the long run. Assuming that the client’s proposed AI solution has an established business value and is ethical, this article narrows the focus to the technical aspects of AI readiness.</p>
 </section>
-<section id="why-does-ai-engineer-need-to-assess-project-sponsor-s-ai-capabilities">
-<h2>Why does AI engineer need to assess project sponsor’s AI capabilities?<a class="headerlink" href="#why-does-ai-engineer-need-to-assess-project-sponsor-s-ai-capabilities" title="Permalink to this headline">#</a></h2>
-<p>Although prior to the development work by the AI engineer, it is best for you to gauge if the PS is capable of taking over your solution for deployment. Most AI projects end up in failures during deployment phase due to three main reasons:</p>
+<section id="why-does-ai-engineer-need-to-assess-client-s-ai-capabilities">
+<h2>Why does AI engineer need to assess client’s AI capabilities?<a class="headerlink" href="#why-does-ai-engineer-need-to-assess-client-s-ai-capabilities" title="Permalink to this headline">#</a></h2>
+<p>When participating in pre-project scoping, it is beneficial for you to gauge if the client is capable of taking over your solution for deployment. Most AI projects end up in failures during deployment phase due to three main reasons:</p>
 <ol class="simple">
 <li><p>Technical hurdles in implementing/integrating model into existing operations</p></li>
 <li><p>Decision makers unwilling to approve change to existing operations</p></li>
@@ -682,29 +676,29 @@ title="Print to PDF"
 </section>
 <section id="what-can-the-ai-engineer-look-out-for">
 <h2>What can the AI engineer look out for?<a class="headerlink" href="#what-can-the-ai-engineer-look-out-for" title="Permalink to this headline">#</a></h2>
-<p>To ensure a successful project, let us focus on three broad areas to help you assess the PS’s AI readiness level.</p>
+<p>To ensure a successful project, let us focus on three broad areas to help you assess the client’s AI readiness level.</p>
 <section id="organisational-readiness">
 <h3>1. Organisational readiness<a class="headerlink" href="#organisational-readiness" title="Permalink to this headline">#</a></h3>
 <blockquote>
-<div><p>Are there competent AI engineers to develop, integrate, and maintain the AI models?</p>
+<div><p>Is there an existing technical team who is able to integrate and maintain the AI models? If not, what are the client’s plans to hire the necessary resources?</p>
 </div></blockquote>
 <blockquote>
-<div><p>Is the management supportive of AI projects and team expansion if necessary?</p>
+<div><p>Is the client’s management supportive of AI projects and team expansion if necessary?</p>
 </div></blockquote>
 <blockquote>
-<div><p>Do the management and key stakeholders allow room for experimentation and development?</p>
+<div><p>Do the client’s management and key stakeholders allow room for experimentation and development?</p>
 </div></blockquote>
-<p>As an organisation looking to use AI solutions, PS’s management should understand that model building and maintenance requires iterative experimentation and continuous re-training, in turn supporting the investment of right talents.</p>
+<p>As an organisation looking to use AI solutions, the client’s management should understand that model building and maintenance requires iterative experimentation and continuous re-training, in turn supporting the investment of right resources.</p>
 </section>
 <section id="infrastructure-readiness">
 <h3>2. Infrastructure readiness<a class="headerlink" href="#infrastructure-readiness" title="Permalink to this headline">#</a></h3>
 <blockquote>
-<div><p>Is there appropriate infrastructure to hold data in a centralised place (e.g. data lake)?</p>
+<div><p>Is there appropriate infrastructure to hold data in a centralised and standardised manner (e.g. data warehouse), or is the client relying on disparate file systems?</p>
 </div></blockquote>
 <blockquote>
-<div><p>Are there sufficient computational resources (e.g. CPUs/GPUs, memory) to support model development, deployment, maintenance for this project? If no, are there plans to acquire more / re-allocate resources?</p>
+<div><p>Are there sufficient computational resources (e.g. CPUs, GPUs, memory) to support model deployment and maintenance for this project? If not, are there plans to acquire more or re-allocate resources?</p>
 </div></blockquote>
-<p>Preparing for such changes strengthens the PS’s infrastructure capabilities, easing their transition into the deployment/integration stages with minimal disruption to their existing activities.</p>
+<p>Preparing for the above strengthens the client’s infrastructure capabilities, easing their transition from deployment to integration with minimal disruption to their existing activities.</p>
 </section>
 <section id="data-readiness">
 <h3>3. Data readiness<a class="headerlink" href="#data-readiness" title="Permalink to this headline">#</a></h3>
@@ -714,7 +708,7 @@ title="Print to PDF"
 <blockquote>
 <div><p>Is there accurate and complete data to be used in this project?</p>
 </div></blockquote>
-<p>It is important for PS to provide high quality and consistent data that can be used for re-training when model drifts over time.</p>
+<p>It is important for the client to maintain high quality and consistent data that can be used for re-training when model drifts over time.</p>
 <p>Note: Click <a class="reference internal" href="key_areas_in_data.html"><span class="doc std std-doc">here</span></a> to read about data readiness on a <em>project</em> level.</p>
 <hr class="docutils" />
 <p>More details available below to help in your assessment:</p>
