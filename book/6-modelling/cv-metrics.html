@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>What are the platforms and their respective considerations required for collaborative ML development? &#8212; AI Practitioner Handbook</title>
+    <title>What are the common CV evaluation metrics? &#8212; AI Practitioner Handbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,12 +50,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
     <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="What are some considerations in setting up a project repository to facilitate collaboration and establish good coding practices among developers?" href="repo-structure-setup.html" />
-    <link rel="prev" title="3. Collaborative Development Platforms" href="overview.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -123,7 +123,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../1-pre-project-phase/overview.html">
    1. Pre-project Phase
@@ -178,23 +178,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="overview.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../3-collab-dev-platforms/overview.html">
    3. Collaborative Development Platforms
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3-collab-dev-platforms/collaborative_ml.html">
      What are the platforms and their respective considerations required for collaborative ML development?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="repo-structure-setup.html">
+    <a class="reference internal" href="../3-collab-dev-platforms/repo-structure-setup.html">
      What are some considerations in setting up a project repository to facilitate collaboration and establish good coding practices among developers?
     </a>
    </li>
@@ -265,7 +265,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../6-modelling/overview.html">
+  <a class="reference internal" href="overview.html">
    6. Modelling
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
@@ -275,27 +275,27 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../6-modelling/optimising-and-satisficing.html">
+    <a class="reference internal" href="optimising-and-satisficing.html">
      What are some internal and external considerations when selecting evaluation metrics?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../6-modelling/model-reproducibility.html">
+    <a class="reference internal" href="model-reproducibility.html">
      How can I maximise model reproducibility?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../6-modelling/ml-risks-and-robustness.html">
+    <a class="reference internal" href="ml-risks-and-robustness.html">
      What are some ML risks I should be aware of? How do ML risks relate to model robustness? What are some tools I can use to assess model robustness?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../6-modelling/evaluating-timeseries.html">
+    <a class="reference internal" href="evaluating-timeseries.html">
      How can we better evaluate time-series classification models?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../6-modelling/post-hoc-explanation.html">
+    <a class="reference internal" href="post-hoc-explanation.html">
      How can we provide a simple post-hoc explanation for black-box AI models to increase trust and improve model validity?
     </a>
    </li>
@@ -467,7 +467,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/3-collab-dev-platforms/collaborative_ml.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/6-modelling/cv-metrics.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -495,7 +495,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/book/3-collab-dev-platforms/collaborative_ml.md"
+        <a href="../../_sources/book/6-modelling/cv-metrics.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -555,18 +555,28 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#communication-tools">
-   Communication tools
+  <a class="reference internal nav-link" href="#mean-average-precision-map">
+   Mean Average Precision (mAP)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#code-versioning">
-   Code versioning
+  <a class="reference internal nav-link" href="#frames-per-second-fps">
+   Frames Per Second (FPS)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#model-weight-data-versioning">
-   Model/weight/data versioning
+  <a class="reference internal nav-link" href="#adjusting-thresholds-for-inference-confidence-and-non-max-suppression-nms">
+   Adjusting Thresholds for Inference - Confidence and Non-max Suppression (NMS)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prioritising-precision-or-recall">
+   Prioritising Precision or Recall
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
   </a>
  </li>
 </ul>
@@ -578,7 +588,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>What are the platforms and their respective considerations required for collaborative ML development?</h1>
+                <h1>What are the common CV evaluation metrics?</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -589,18 +599,28 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#communication-tools">
-   Communication tools
+  <a class="reference internal nav-link" href="#mean-average-precision-map">
+   Mean Average Precision (mAP)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#code-versioning">
-   Code versioning
+  <a class="reference internal nav-link" href="#frames-per-second-fps">
+   Frames Per Second (FPS)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#model-weight-data-versioning">
-   Model/weight/data versioning
+  <a class="reference internal nav-link" href="#adjusting-thresholds-for-inference-confidence-and-non-max-suppression-nms">
+   Adjusting Thresholds for Inference - Confidence and Non-max Suppression (NMS)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prioritising-precision-or-recall">
+   Prioritising Precision or Recall
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
   </a>
  </li>
 </ul>
@@ -613,39 +633,172 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="what-are-the-platforms-and-their-respective-considerations-required-for-collaborative-ml-development">
-<h1>What are the platforms and their respective considerations required for collaborative ML development?<a class="headerlink" href="#what-are-the-platforms-and-their-respective-considerations-required-for-collaborative-ml-development" title="Permalink to this headline">#</a></h1>
-<p>Contributor(s): Dylan Poh Guan Kiong, AI Engineer <a class="reference external" href="https://unicorndy.github.io/Dylan_Poh/">(GitHub)</a></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="what-are-the-common-cv-evaluation-metrics">
+<h1>What are the common CV evaluation metrics?<a class="headerlink" href="#what-are-the-common-cv-evaluation-metrics" title="Permalink to this headline">#</a></h1>
+<p>Contributor(s): Calvin Neo, AI Engineer</p>
 <hr class="docutils" />
-<p>With the increasing complexity of machine learning projects, it is highly likely that a team of developers is required to complete the task. As a result, it is critical to have the ability to collaborate efficiently.</p>
-<p>Fundamentally, there are two ways that teams collaborate.</p>
-<p><em>Luke Marsden: When you boil it down to basics, there are really two fundamental modes of collaborating between different people doing work: synchronous and asynchronous.</em></p>
-<p><em>Synchronous</em>: Communications are scheduled, real-time interactions by phone, video, or in-person, sometimes interrupting one another for urgent tasks or simply asking a question. In terms of development, the upstream have to complete their tasks before the downstream team can continue with their work (Dependencies issues)</p>
-<p><em>Asynchronous</em>: Communication happens on your own time, with a different team or people concurrently working on a different task. An efficient mechanism is required to resolve merge conflicts.</p>
-<p>With this in mind, we seek to introduce some tools and practices for a team to get started in the hope that stumbling blocks will be reduced to the minimum. The practices introduced here assume development using Python as the primary language.</p>
-<section id="communication-tools">
-<h2>Communication tools<a class="headerlink" href="#communication-tools" title="Permalink to this headline">#</a></h2>
-<p>Establishing effective communication right from the beginning of any project will allow all team members to align toward the same goal and reduce any possible friction. A quintessential example of miscommunication is an unclear problem statement leading to team members having different views on the outcome of the project.</p>
-<p>The following tools (by no means exhaustive) may be useful for remote, office, and hybrid working arrangements:</p>
-<ul class="simple">
-<li><p>A big whiteboard often produces the most efficient channel to share ideas. (Physical Meetup)</p></li>
-<li><p><a class="reference external" href="https://workspace.google.com/">Google Workspace</a>, a full suite of communication tools such as Google meet, shared Google calendar, and Gmail to see the complete list of participants and scheduled meetings. Other option includes the <a class="reference external" href="https://www.microsoft.com/en-us/microsoft-teams/log-in">Microsoft Team</a>.</p></li>
-<li><p><a class="reference external" href="https://miro.com/">Miro</a> is an easy to use, intuitive, collobration tool that uses little effort to setup quickly. Other option includes <a class="reference external" href="https://coggle.it/">Coggle</a>.</p></li>
-</ul>
+<p>This guide assumes a fair understanding of the computer vision-related tasks specifically image classification, object detection, and instance segmentation and their accompanying terms such as bounding boxes (bboxes) and masks. Additionally, it assumes an understanding of classification metrics such as F1 score, precision and recall.</p>
+<p>The purpose of this article is to guide AI engineers on key considerations when evaluating metrics for object detection and instance segmentation tasks. For the most part, conventional classification metrics can be used to evaluate image classification tasks. Hence, an understanding of image classification would be useful hre. In this case, refer to the article on Classification metrics.</p>
+<section id="mean-average-precision-map">
+<h2>Mean Average Precision (mAP)<a class="headerlink" href="#mean-average-precision-map" title="Permalink to this headline">#</a></h2>
+<p>There are many articles on how to calculate mAP available. It is thus instructive to instead discuss considerations when reading mAP.</p>
+<p>In discussing mAP evaluation, consider the output below:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Average Precision</p></th>
+<th class="head"><p>IOU</p></th>
+<th class="head"><p>Area</p></th>
+<th class="head"><p>Max Detections</p></th>
+<th class="head"><p>mAP</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Average Precision</p></td>
+<td><p>0.50:0.95</p></td>
+<td><p>all</p></td>
+<td><p>100</p></td>
+<td><p>0.326</p></td>
+</tr>
+<tr class="row-odd"><td><p>Average Precision</p></td>
+<td><p>0.5</p></td>
+<td><p>all</p></td>
+<td><p>1000</p></td>
+<td><p>0.743</p></td>
+</tr>
+<tr class="row-even"><td><p>Average Precision</p></td>
+<td><p>0.75</p></td>
+<td><p>all</p></td>
+<td><p>1000</p></td>
+<td><p>0.213</p></td>
+</tr>
+<tr class="row-odd"><td><p>Average Precision</p></td>
+<td><p>0.50:0.95</p></td>
+<td><p>small</p></td>
+<td><p>1000</p></td>
+<td><p>0.127</p></td>
+</tr>
+<tr class="row-even"><td><p>Average Precision</p></td>
+<td><p>0.50:0.95</p></td>
+<td><p>medium</p></td>
+<td><p>1000</p></td>
+<td><p>0.349</p></td>
+</tr>
+<tr class="row-odd"><td><p>Average Precision</p></td>
+<td><p>0.50:0.95</p></td>
+<td><p>large</p></td>
+<td><p>1000</p></td>
+<td><p>0.406</p></td>
+</tr>
+</tbody>
+</table>
+<p>Firstly, it is useful to evaluate the Intersection over Union (IOU) threshold value to understand how “tight” a bbox/mask. A higher IOU threshold value indicates that the model’s inference closely overlaps with the ground truth. Generally, the mAP suffers as the IOU threshold value increases. Thus, evaluating how much these values fall would be valuable clues on how well the model may produce tight bboxes/masks.</p>
+<p>Using the outputs above, the second row shows that at IOU threshold of 0.50, the mAP is given by 0.743. Similarly, the third row showing IOU=0.75 threshold shows 0.213, a 0.53 fall in value. This indicates that the bboxes/masks produced by the model were not tight enough, and more training may be required.</p>
+<p>Secondly, the objects being detected can be broadly separated to small/medium/large objects based on the bbox/mask size. Here, it is assumed the small/medium/large are area of the bbox/mask, and that area threshold for these sizes are clearly defined (see CV EDA article to guide the size of these annotations).</p>
+<p>A model generally performs the worst on small objects and gets better as the size increases. Thus, evaluating this is also instructive. Considering the above outputs, the mAP is 0.127/0.349/0.406 on small/medium/large objects. Thus, it would be good to have the model be trained on more small objects in order to potentially improve its performance.</p>
 </section>
-<section id="code-versioning">
-<h2>Code versioning<a class="headerlink" href="#code-versioning" title="Permalink to this headline">#</a></h2>
-<p>Jupyter notebooks (.ipynb) are powerful, but also have many limitations. For example, it is impractical to use pure git for versioning Jupyter notebooks (because of large amounts of embedded and frequently changing HTML). Jupyter notebooks are also unsuitable for deployment or production. Naming and renaming files or folders with comments are also undesirable and difficult to keep track of.</p>
-<p>Instead, using <a class="reference external" href="https://git-scm.com/">git</a> for distributed version control and tracking changes helps coordinate work among team members. Developing code in Python script (.py) is highly preferred and using <a class="reference external" href="https://about.gitlab.com/">GitLab</a> or <a class="reference external" href="https://github.com/">GitHub</a> to manage your code online with an advanced interface to resolve merged conflict that occurs frequently for asynchronous work.</p>
-<p>Merge conflicts occur when the source and target branches of a merge request (as termed by GitLab) or pull request (as termed  by GitHub) contain different changes or commits. As mentioned, this is especially common during collaboration when more than two engineers are contributing to the code. In this case, engineers must choose which change to accept. Once the changes are made, you can assign reviewer to inspect the changes which ensure the correctness of the merge and prevent breaking the code. Examples of the occurrence of and tools to handle conflicts are linked here for both <a class="reference external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github">GitHub</a> and <a class="reference external" href="https://docs.gitlab.com/ee/user/project/merge_requests/conflicts.html#:~:text=Merge%20conflicts%20happen%20when%20the,GitLab%20can%20merge%20changes%20together.">GitLab</a>.</p>
-<p>Keeping a standardised environment for development keeps Python package dependencies consistent, and together with git, allows different members to easily switch between different machines such as local machines or machines in the cloud. One popular option that manages the environment is <a class="reference external" href="https://docs.conda.io/en/latest/">Conda</a> (environment.yml)</p>
-<p>More in-depth information on setting up a machine learning project repository can be found <a class="reference external" href="https://aisingapore.github.io/handbook-staging/book/3-collab-dev-platforms/repo-structure-setup.html">here</a>.</p>
+<section id="frames-per-second-fps">
+<h2>Frames Per Second (FPS)<a class="headerlink" href="#frames-per-second-fps" title="Permalink to this headline">#</a></h2>
+<p>FPS are generally measured by running multiple images through the pipeline and obtaining the amount of time taken to process each image, before converting it to frames per second. The way to do it is:</p>
+<p><span class="math notranslate nohighlight">\(FPS = \frac{1}{\text{Average Time Taken Per Image}}\)</span></p>
+<p>Here, the AI Engineer would need to consider the following:</p>
+<p>FPS should be calculated based off either model’s or the software architecture’s inference speed. This is obvious but often overlooked. When delivering the model, the onus is on the AI Engineer to communicate how the FPS was measured to manage expectations.</p>
+<p>It is also important to consider what affects FPS. The first factor would be model size. A model that is deep, and hence tend to be larger in size, requires a longer processing time. Another factor is image size. Larger image size will take longer for inference. For example, a 416x416 image will be faster than 1080x960 image. While again this is obvious, it is also often overlooked by AI Engineers when reading papers that purport higher inference speeds, but downplays the role that smaller images have on inference speed.</p>
 </section>
-<section id="model-weight-data-versioning">
-<h2>Model/weight/data versioning<a class="headerlink" href="#model-weight-data-versioning" title="Permalink to this headline">#</a></h2>
-<p>Shared storage such as cloud storage ensures the team is assessing the correct dataset and having access to a shared transformed dataset cuts down data preprocessing/transformation time allowing the engineer to focus on modeling. Also, weights and datasets should not be pushed to the version control system, as the repository size might become too large for the local machine.</p>
-<p>Having a system to keep track of the trained model and the corresponding dataset early on will prove to be fruitful, as more experiments will make it difficult to trace back. One good practice will be to save the checkpoints and the models together and keep track of the corresponding dataset used for the training. Recommended tools include <a class="reference external" href="https://mlflow.org/">MLflow</a> and <a class="reference external" href="https://wandb.ai/site">Weights &amp; Biases</a> for tracking experiments and versioning models. <a class="reference external" href="https://dvc.org/">DVC</a> and <a class="reference external" href="https://neptune.ai/">neptune.ai</a> are tools to consider for data version control. Even a simple shared spreadsheet keeping track of model/weights/dataset versioning will pay off eventually.</p>
-<p>It is also possible to set up a cloud-based compute/development environment where all collaborators can share the same environment and tools (VScode, Jupyter Lab) and shared storage. Some of the examples are Amazon EC2 Instance Types, Data Science Virtual Machine and Google Compute Engine.</p>
+<section id="adjusting-thresholds-for-inference-confidence-and-non-max-suppression-nms">
+<h2>Adjusting Thresholds for Inference - Confidence and Non-max Suppression (NMS)<a class="headerlink" href="#adjusting-thresholds-for-inference-confidence-and-non-max-suppression-nms" title="Permalink to this headline">#</a></h2>
+<p>When a model makes an inference, it will give a confidence level of the object’s class. If the confidence does not meet or exceed the threshold, then it will not be included.</p>
+<p>Similarly, when a model makes duplicative inference on the same object, meaning it has two or more bounding boxes on the same object, there has to be a mechanism to suppress these duplicative boxes.</p>
+<p>Thus, the engineer may use the Confidence and/or NMS threshold to ensure to adjust the precision and recall of the model.</p>
+<p>To show this, consider the output below. Such a table can be generated by running the model on a combination of possible threshold values.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Confidence</p></th>
+<th class="head"><p>NMS</p></th>
+<th class="head"><p>IOU</p></th>
+<th class="head"><p>Precision</p></th>
+<th class="head"><p>Recall</p></th>
+<th class="head"><p>F1 Score</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.3</p></td>
+<td><p>0.1</p></td>
+<td><p>0.5</p></td>
+<td><p>0.697</p></td>
+<td><p>0.752</p></td>
+<td><p>0.724</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.5</p></td>
+<td><p>0.1</p></td>
+<td><p>0.5</p></td>
+<td><p>0.750</p></td>
+<td><p>0.732</p></td>
+<td><p>0.741</p></td>
+</tr>
+<tr class="row-even"><td><p>0.7</p></td>
+<td><p>0.1</p></td>
+<td><p>0.5</p></td>
+<td><p>0.811</p></td>
+<td><p>0.697</p></td>
+<td><p>0.750</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.3</p></td>
+<td><p>0.4</p></td>
+<td><p>0.5</p></td>
+<td><p>0.640</p></td>
+<td><p>0.789</p></td>
+<td><p>0.707</p></td>
+</tr>
+<tr class="row-even"><td><p>0.5</p></td>
+<td><p>0.4</p></td>
+<td><p>0.5</p></td>
+<td><p>0.718</p></td>
+<td><p>0.759</p></td>
+<td><p>0.738</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.7</p></td>
+<td><p>0.4</p></td>
+<td><p>0.5</p></td>
+<td><p>0.794</p></td>
+<td><p>0.717</p></td>
+<td><p>0.754</p></td>
+</tr>
+<tr class="row-even"><td><p>0.3</p></td>
+<td><p>0.7</p></td>
+<td><p>0.5</p></td>
+<td><p>0.579</p></td>
+<td><p>0.800</p></td>
+<td><p>0.672</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.5</p></td>
+<td><p>0.7</p></td>
+<td><p>0.5</p></td>
+<td><p>0.682</p></td>
+<td><p>0.768</p></td>
+<td><p>0.722</p></td>
+</tr>
+<tr class="row-even"><td><p>0.7</p></td>
+<td><p>0.7</p></td>
+<td><p>0.5</p></td>
+<td><p>0.774</p></td>
+<td><p>0.723</p></td>
+<td><p>0.747</p></td>
+</tr>
+</tbody>
+</table>
+<p>It is clear here that Confidence and NMS threshold can appear to be at odds with each other. As Confidence Threshold is increases, the Precision increases, but Recall is lower. Conversely, a higher NMS threshold gives better recall.</p>
+</section>
+<section id="prioritising-precision-or-recall">
+<h2>Prioritising Precision or Recall<a class="headerlink" href="#prioritising-precision-or-recall" title="Permalink to this headline">#</a></h2>
+<p>As stated above, the AI Engineer has to continually engage with the product owner in determining which to prioritise. Obviously, they can also rely on F1-Score to harmonise the two. However, do keep in mind the following:</p>
+<ol class="simple">
+<li><p>Choose Precision if the priority of the model is to identify objects.</p></li>
+<li><p>Choose Recall if the priority of the model is identify objects and their class correctly.</p></li>
+</ol>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">#</a></h2>
+<p>This article addresses the conventional metrics for object detection and instance segmentation in the context of pushing a product. Beyond simply calculating these metrics, the AI Engineer would do well look out for granular details when evaluating the metrics in order to give a more accurate picture of model performance.</p>
 </section>
 </section>
 
@@ -662,7 +815,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./book/3-collab-dev-platforms"
+            path: "./book/6-modelling"
         },
         predefinedOutput: true
     }
@@ -676,20 +829,6 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="overview.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">3. Collaborative Development Platforms</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="repo-structure-setup.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">What are some considerations in setting up a project repository to facilitate collaboration and establish good coding practices among developers?</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
