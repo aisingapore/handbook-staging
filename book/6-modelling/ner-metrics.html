@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>What are some of the common NLP metrics &#8212; AI Practitioner Handbook</title>
+    <title>What are some of the common metrics in Named Entity Recognition &#8212; AI Practitioner Handbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -56,8 +56,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="How can we better evaluate time-series classification models?" href="evaluating-timeseries.html" />
-    <link rel="prev" title="What are the common CV evaluation metrics?" href="cv-metrics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -125,7 +123,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../1-pre-project-phase/overview.html">
    1. Pre-project Phase
@@ -286,16 +284,16 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="overview.html">
    6. Modelling
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="optimising-and-satisficing.html">
      What are some internal and external considerations when selecting evaluation metrics?
@@ -314,11 +312,6 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="cv-metrics.html">
      What are the common CV evaluation metrics?
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     What are some of the common NLP metrics
     </a>
    </li>
    <li class="toctree-l2">
@@ -499,7 +492,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/6-modelling/nlp-metrics.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/6-modelling/ner-metrics.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -527,7 +520,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/book/6-modelling/nlp-metrics.md"
+        <a href="../../_sources/book/6-modelling/ner-metrics.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -587,8 +580,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ner">
-   NER
+  <a class="reference internal nav-link" href="#named-entity-recognition">
+   Named Entity Recognition
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -605,7 +598,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>What are some of the common NLP metrics</h1>
+                <h1>What are some of the common metrics in Named Entity Recognition</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -616,8 +609,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ner">
-   NER
+  <a class="reference internal nav-link" href="#named-entity-recognition">
+   Named Entity Recognition
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -635,14 +628,44 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="what-are-some-of-the-common-nlp-metrics">
-<h1>What are some of the common NLP metrics<a class="headerlink" href="#what-are-some-of-the-common-nlp-metrics" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="what-are-some-of-the-common-metrics-in-named-entity-recognition">
+<h1>What are some of the common metrics in Named Entity Recognition<a class="headerlink" href="#what-are-some-of-the-common-metrics-in-named-entity-recognition" title="Permalink to this headline">#</a></h1>
 <p>Contributor(s): Lee Xin Jie, Senior AI Engineer (100E)</p>
-<p><em>Currently, this article only covers the NER task, which is an extension of classification in NLP. The evaluation metrics for more NLP tasks will be added in future.</em></p>
-<section id="ner">
-<h2>NER<a class="headerlink" href="#ner" title="Permalink to this headline">#</a></h2>
-<p>NER can be thought of as a token level classification problem. Hence, NER models are often tuned using metrics such as F1, precision, recall at a token level during model training. When it comes to evaluating NER models on their downstream tasks’ performance, it may be more beneficial to evaluate NER models at a full named-entity level. There are multiple evaluation schemes for evaluating NER models at a full named-entity level.</p>
-<p>This article will focus on the SemEval (International Workshop on Semantic Evaluation) scheme, which is one of the most popular schemes. In the SemEval scheme, there are 4 ways of measuring F1, precision and recall. A detailed explanation can be found in this <a class="reference external" href="https://www.davidsbatista.net/blog/2018/05/09/Named_Entity_Evaluation/">blog</a>.</p>
+<section id="named-entity-recognition">
+<h2>Named Entity Recognition<a class="headerlink" href="#named-entity-recognition" title="Permalink to this headline">#</a></h2>
+<p>Named Entity Recognition refers to the task for locating and classifying named entities in text documents.</p>
+<p>This article assumes prior knowledge of the IOB (also known as BIO) format for entity tagging. IOB stands for inside, outside and beginning, where outside (O) indicates a token not belonging to an entity, beginning (B) indicates a token is the start of an entity and inside (I) indicates a token is inside an entity. You may refer to this <a class="reference external" href="https://en.wikipedia.org/wiki/Inside%E2%80%93outside%E2%80%93beginning_(tagging)">article</a> for more information on the IOB format.</p>
+<p>NER can be thought of as a token level classification problem. Hence, NER models are often tuned using metrics such as F1, precision, recall at a token level during model training. When it comes to evaluating NER models on their downstream tasks’ performance, it may be more beneficial to aggregate the individual tokens into full named-entities, and evaluate NER models at a full named-entity level against golden standard annotations. This also makes the evaluation more relatable for the client.</p>
+<p>There are multiple evaluation schemes for evaluating NER models at a full named-entity level. This article will focus on the SemEval (International Workshop on Semantic Evaluation) scheme, which is one of the most popular schemes. The SemEval scheme is built off the Message Understanding Conferene (MUC) scheme.</p>
+<p>Before we dive deeper into the SemEval scheme, ley us take a brief look into the MUC scheme. The MUC scheme introduces 5 categories to reflect the correctness of the full named-entities, and the classes are as follows. For a further read up on the MUC scheme, refer to this <a class="reference external" href="https://aclanthology.org/M93-1007/">link</a></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Evaluation Scheme</p></th>
+<th class="head"><p>Explanation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Correct (COR)</p></td>
+<td><p>The output of a system and the golden annotation are the same</p></td>
+</tr>
+<tr class="row-odd"><td><p>Incorrect (INC)</p></td>
+<td><p>The output of a system and the golden annotation don’t match</p></td>
+</tr>
+<tr class="row-even"><td><p>Partial (PAR)</p></td>
+<td><p>System and the golden annotation are somewhat “similar” but not the same</p></td>
+</tr>
+<tr class="row-odd"><td><p>Missing (MIS)</p></td>
+<td><p>A golden annotation is not captured by a system</p></td>
+</tr>
+<tr class="row-even"><td><p>Spurius (SPU)</p></td>
+<td><p>System produces a response which doesn’t exist in the golden annotation</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.davidsbatista.net/blog/2018/05/09/Named_Entity_Evaluation/">Source</a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>In the SemEval scheme, there are 4 options of measuring the overall performance. They differ in terms of what is considered to be correct, incorrect, partial, missed and spurious predictions. Specifically, these 4 options indicate the correctness of the full named-entities with respect to their boundaries and entity classes. All 4 options can be applied to the computation of F1, precision and recall. A detailed explanation can be found in this <a class="reference external" href="https://www.davidsbatista.net/blog/2018/05/09/Named_Entity_Evaluation/">blog</a>.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Evaluation Scheme</p></th>
@@ -667,35 +690,7 @@ title="Print to PDF"
 </tr>
 </tbody>
 </table>
-<p>The SemEval scheme is built off the MUC scheme which defines the following metrics.</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Evaluation Scheme</p></th>
-<th class="head"><p>Explanation</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Correct (COR)</p></td>
-<td><p>Both are the same</p></td>
-</tr>
-<tr class="row-odd"><td><p>Incorrect (INC)</p></td>
-<td><p>The output of a system and the golden annotation don’t match</p></td>
-</tr>
-<tr class="row-even"><td><p>Partial (PAR)</p></td>
-<td><p>System and the golden annotation are somewhat “similar” but not the same</p></td>
-</tr>
-<tr class="row-odd"><td><p>Missing (MIS)</p></td>
-<td><p>A golden annotation is not captured by a system</p></td>
-</tr>
-<tr class="row-even"><td><p>Spurius (SPU)</p></td>
-<td><p>System produces a response which doesn’t exist in the golden annotation</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference external" href="https://www.davidsbatista.net/blog/2018/05/09/Named_Entity_Evaluation/">Source</a></p></td>
-<td><p></p></td>
-</tr>
-</tbody>
-</table>
-<p>To illustrate this with examples, consider the following phrase with its labels.</p>
+<p>To illustrate the SemEval scheme with an example, consider the same example as before.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Token</p></th>
@@ -712,9 +707,15 @@ title="Print to PDF"
 <tr class="row-even"><td><p>agency</p></td>
 <td><p>Org</p></td>
 </tr>
+<tr class="row-odd"><td><p>is</p></td>
+<td><p>Other</p></td>
+</tr>
+<tr class="row-even"><td><p>here</p></td>
+<td><p>Other</p></td>
+</tr>
 </tbody>
 </table>
-<p><img alt="SemEval example" src="../../_images/semeval_example.png" /></p>
+<p><img alt="SemEval example" src="../../_images/semeval-example.png" /></p>
 <p>Next, we compute the total number of gold annotations with the formula:</p>
 <p><span class="math notranslate nohighlight">\(Possible (POS) = COR + INC + PAR + MIS = TP + FN\)</span></p>
 <p>The total annotations produced by the system is:</p>
@@ -795,10 +796,15 @@ title="Print to PDF"
 <p>c2) <span class="math notranslate nohighlight">\(\frac{2}{2 + 2 + 0 + 1} = \frac{2}{5}\)</span></p>
 <p>d1) <span class="math notranslate nohighlight">\(\frac{1}{1 + 3 + 0 + 1} = \frac{1}{5}\)</span></p>
 <p>d2) <span class="math notranslate nohighlight">\(\frac{1}{1 + 3 + 0 + 1} = \frac{1}{5}\)</span></p>
+<p>In general, partial will be the most lenient evaluation, while strict will be the most stringent evaluation. The scores for type and exact will usually fall in between partial and strict.</p>
+<p>If getting both the boundaries and the classes of the full named-entities are important, then strict will be the measure that you should prioritise. If it is only critical to get the boundaries correct, then exact will be the more appropriate measure to optimise for. Likewise, if it is only critical to get the classes correct and it is acceptable to get partial boundary overlaps, then type will be the more appropriate measure. Lastly, if only partial boundary overlaps are required and it is not important to get the classes correct, then partial can be the preferred measure. Generally, it is more common for type and exact to be preferred. You should check what the client’s requirements are before making a decision as to which to prioritise.</p>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
-<p><a class="reference external" href="https://www.davidsbatista.net/blog/2018/05/09/Named_Entity_Evaluation/">Named-Entity evaluation metrics based on entity-level</a></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.davidsbatista.net/blog/2018/05/09/Named_Entity_Evaluation/">Named-Entity evaluation metrics based on entity-level</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Inside%E2%80%93outside%E2%80%93beginning_(tagging)">Inside–outside–beginning (tagging)</a></p></li>
+</ul>
 </section>
 </section>
 
@@ -829,20 +835,6 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="cv-metrics.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">What are the common CV evaluation metrics?</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="evaluating-timeseries.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">How can we better evaluate time-series classification models?</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
