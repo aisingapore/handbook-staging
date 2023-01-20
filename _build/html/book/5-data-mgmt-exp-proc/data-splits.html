@@ -762,12 +762,12 @@ title="Print to PDF"
 <section id="nested-cross-validation">
 <h2>3. Nested cross-validation<a class="headerlink" href="#nested-cross-validation" title="Permalink to this headline">#</a></h2>
 <p>While cross-validation reduces the amount of overfitting as compared to the use of a static train test split, it does not reduce it completely. This is because the same score is used to select the best model and to evaluate the model.</p>
-<p>To overcome it, you may choose to use nested cross-validation, which will seperate the score used to select the best model and to evalute the model. In this approach, the outer loop is used mainly for model evaluation, while the inner loop is used for hyperparameter tuning.</p>
+<p>To overcome it, you may choose to use nested cross-validation, which will separate the score used to select the best model and to evaluate the model. In this approach, the outer loop is used mainly for model evaluation, while the inner loop is used for hyperparameter tuning.</p>
 <p>To illustrate this, let us assume you are using an outer fold of 3, and an inner fold of 3, and you are tuning and evaluating for the parameter <em>n</em> for a model. For the outer loop, you will split the dataset into 3 folds, and rotate the test fold for each set.</p>
 <p><img alt="Outer Split" src="../../_images/nested-outer-fold.png" /></p>
 <p>Taking the first training set, you will further split it into 3 folds with 1 fold serving as the validation set.</p>
 <p><img alt="Inner Split" src="../../_images/nested-inner-fold.png" /></p>
-<p>You will train a model with a value of <em>n</em>, say <em>n=1</em>, on the training folds, and evaluate the model on the validation fold. You repeat the model training with the same <em>n=1</em> value each time you rotate the validation fold. The mean of the scores across all validation folds will be the validation score for the paramater <em>n=1</em>. You will repeat this procedure for all other <em>n</em> values, and then select the best <em>n</em> value.</p>
+<p>You will train a model with a value of <em>n</em>, say <em>n=1</em>, on the training folds, and evaluate the model on the validation fold. You repeat the model training with the same <em>n=1</em> value each time you rotate the validation fold. The mean of the scores across all validation folds will be the validation score for the parameter <em>n=1</em>. You will repeat this procedure for all other <em>n</em> values, and then select the best <em>n</em> value.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Train</p></th>
@@ -824,7 +824,7 @@ title="Print to PDF"
 </tr>
 </tbody>
 </table>
-<p>Finally, you will train on the full training and validation set with this best <em>n</em> parameter, and evaluate on the test set that was set aside intially in the outer fold.</p>
+<p>Finally, you will train on the full training and validation set with this best <em>n</em> parameter, and evaluate on the test set that was set aside initially in the outer fold.</p>
 <p>You repeat the same procedure for all iterations of the outer loop, to obtain the final evaluation of the model.</p>
 <table class="colwidths-auto table">
 <thead>
