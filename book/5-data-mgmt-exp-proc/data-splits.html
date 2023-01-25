@@ -746,7 +746,6 @@ title="Print to PDF"
 <h3>Split ratio<a class="headerlink" href="#split-ratio" title="Permalink to this headline">#</a></h3>
 <p>There is no single ‘golden’ data splitting proportion. In general, the larger your dataset, the lower the proportion of data you have to set aside for the validation and test sets. If you have a dataset with a billion data points, you could theoretically set aside 1% of the data for the test set, and still have a sufficiently large test set of 10 million data points. Conversely, the smaller your dataset, the larger the proportion of data that should be set aside for your validation and test sets. This will allow you to have a more confident estimation of model performance during production, as your model’s performance will be determined on a larger and more diverse validation/test set.</p>
 <p>One commonly used rule of thumb will be to adopt a 70-20-10 split for your train, validation and test sets respectively. Ultimately, you should prioritise selecting a ratio catered to your needs.</p>
-<br/>
 </section>
 </section>
 <section id="cross-validation">
@@ -757,7 +756,6 @@ title="Print to PDF"
 <img alt="Cross Validation" src="../../_images/cross-validation.svg.png" /></p>
 <p>Source: <span class="xref myst">Cross-validation (statistics)</span></p>
 <p>To obtain the final evaluation result, you can take the average of all splits’ test set results. If you are satisfied with this result, you can train the final “champion” model by fitting the model to the entire dataset. This will be the model used for inference.</p>
-<br/>
 </section>
 <section id="nested-cross-validation">
 <h2>3. Nested cross-validation<a class="headerlink" href="#nested-cross-validation" title="Permalink to this headline">#</a></h2>
@@ -860,7 +858,6 @@ title="Print to PDF"
 <p>When you are satisfied with the results, you can train the final “champion” model by fitting the model to the entire dataset.</p>
 <p>The drawback of the nested cross-validation approach is that the training time will even be longer than the standard cross-validation.</p>
 <p><strong>Tip</strong>: In cases of extremely small datasets, you could consider <em>nested cross-validation</em> to maximise the usage of the whole dataset for training, validation and testing.</p>
-<br/>
 </section>
 <section id="stratified-split">
 <h2>4. Stratified Split<a class="headerlink" href="#stratified-split" title="Permalink to this headline">#</a></h2>
@@ -868,7 +865,6 @@ title="Print to PDF"
 <p>An example of a dataset with features that are skewed in their distribution will be a credit worthiness classification problem, where you may have fewer individuals in the dataset with ages of less than 20 years old.  A random split could result in insufficient numbers of them getting assigned to the validation and test sets. If it is critical to model the behaviour of this age group, you can stratify the dataset based on age buckets. Doing so would fix the proportion of each age group getting assigned to each set.</p>
 <p>An example of a dataset with imbalanced targets will be a fraud detection dataset, where fraudulent examples are typically the minority. In this case, you will stratify the dataset based on the target.</p>
 <p>In general, the larger the dataset, the less likely features and targets will be unevenly distributed across the sets. You should still check your dataset for any uneven distribution in features and targets.</p>
-<br/>
 </section>
 <section id="temporal-split">
 <h2>5. Temporal Split<a class="headerlink" href="#temporal-split" title="Permalink to this headline">#</a></h2>
@@ -883,7 +879,6 @@ title="Print to PDF"
 Source: <a class="reference external" href="https://miro.medium.com/max/1204/1*qvdnPF8ETV9mFdMT0Y_BBA.webp">Cross Validation in Time Series</a></p>
 <p>The steps to obtain the final evaluation results are the same as cross validation. You will likewise obtain the final result by taking the average of all k splits’ tests results.</p>
 <p>Similarly, when you are satisfied with the results, you can train the final “champion” model by fitting the model to the entire dataset.</p>
-<br/>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
